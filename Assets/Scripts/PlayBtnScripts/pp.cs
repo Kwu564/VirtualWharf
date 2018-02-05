@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.Animations;
-
+using Rewired;
 // Hover on button, and it expands.
 // Collision detection is only on the circle instead of the whole button
 
@@ -10,10 +10,11 @@ public class pp : MonoBehaviour{
 	public GameObject PlayButtonMM;
 	private Animation anim;
 	public bool paused;
-
-	void Start(){
+    private Player p1;
+    void Start(){
 		paused = true;
 		anim = PlayButtonMM.GetComponent<Animation> ();
+        p1 = ReInput.players.GetPlayer(0);
 	}
 	void Update(){
 		// If paused, play
@@ -41,7 +42,7 @@ public class pp : MonoBehaviour{
 	public void OnMouseOver(){
 		paused = false;
 //		anim.Play();
-		if (Input.GetMouseButtonDown (0)) {
+		if (p1.GetButton("action")) {
 			SceneManager.LoadScene ("sceneOne");
 		}else if(Input.GetButtonDown("Submit")){ //checks if x button is down
 			SceneManager.LoadScene ("sceneOne");

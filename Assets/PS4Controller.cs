@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine;
+using Rewired;
 
 public class PS4Controller : MonoBehaviour {
 	public GameObject PlayButtonMM;
 	public GameObject[] Buttons;
 	[SerializeField] private float scrollSpeed;
+    public Player p1;
 	private int x = 0;
+    void Awake()
+    {
+        p1 = ReInput.players.GetPlayer(0);
+    }
 	void Start () {
 		InvokeRepeating ("getInput",0,scrollSpeed);
 	}
@@ -25,7 +31,7 @@ public class PS4Controller : MonoBehaviour {
 
 	void getInput(){
 		//float horizontal = CrossPlatformInputManager.GetAxis ("Horizontal");
-		float vertical = CrossPlatformInputManager.GetAxis ("Vertical");
+		float vertical = p1.GetAxis("Vertical");
 		//print (vertical);
 		if (vertical < 0f) {
 			x = (x + 1) % Buttons.Length;
