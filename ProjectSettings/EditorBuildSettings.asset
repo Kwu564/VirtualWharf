@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditsPage.unity
     guid: ab58b174f02bc88488eb555711e79457
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/MidPierGames/MPGame1.unity
+    guid: 8839e59eaf1097a4d88e1e52cdcf316c

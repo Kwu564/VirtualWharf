@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using Rewired;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 // TODO: Add timer, art, info, and scores
 public class RandomValues : MonoBehaviour {
 	public GameObject Pole1;
@@ -32,7 +33,11 @@ public class RandomValues : MonoBehaviour {
 	void Start (){
 		PlayerOne=ReInput.players.GetPlayer (0);
 		PlayerTwo = ReInput.players.GetPlayer (1);
-		RandomizedValue = (Exclam [Random.Range (0, Exclam.Length)]);
+        PlayerOne.controllers.maps.SetAllMapsEnabled(false);
+        PlayerOne.controllers.maps.SetMapsEnabled(true, "game1");
+        PlayerTwo.controllers.maps.SetMapsEnabled(true, "game1");
+
+        RandomizedValue = (Exclam [Random.Range (0, Exclam.Length)]);
 		ShowEx1 = false;
 		ShowEx2 = false;
 		ShowEx3 = false;
@@ -41,7 +46,7 @@ public class RandomValues : MonoBehaviour {
 		SelectedPole = false;
 	}
 	void CheckForCorrectness(){
-			if ((PlayerOne.GetButtonDown ("FirstPole") || PlayerTwo.GetButtonDown ("FirstPole")) && (RandomizedValue == 0)) {
+			if ((PlayerOne.GetButton ("FirstPole") || PlayerTwo.GetButtonDown ("FirstPole")) && (RandomizedValue == 0)) {
 				ConditionsOfPole ();
 				// Add points
 				ShowEx1 = false;
@@ -50,13 +55,13 @@ public class RandomValues : MonoBehaviour {
 				ShowEx4 = false;
 				RandomizedValue = (Exclam [Random.Range (0, Exclam.Length)]);
 			//	Destroy (Pole1);
-			} else if ((PlayerOne.GetButtonDown ("FirstPole") || PlayerTwo.GetButtonDown ("FirstPole")) && (RandomizedValue != 0)) {
+			} else if ((PlayerOne.GetButton ("FirstPole") || PlayerTwo.GetButtonDown ("FirstPole")) && (RandomizedValue != 0)) {
 				ShowEx1 = false;
 				ShowEx2 = false;
 				ShowEx3 = false;
 				ShowEx4 = false;
 				Debug.Log ("0 POINTS");
-			} else if ((PlayerOne.GetButtonDown ("SecPole") || PlayerTwo.GetButtonDown ("SecPole")) && (RandomizedValue == 1)) {
+			} else if ((PlayerOne.GetButton ("SecPole") || PlayerTwo.GetButtonDown ("SecPole")) && (RandomizedValue == 1)) {
 				
 				ConditionsOfPole ();
 				// Add points
@@ -65,13 +70,13 @@ public class RandomValues : MonoBehaviour {
 				ShowEx3 = false;
 				ShowEx4 = false;
 				RandomizedValue = (Exclam [Random.Range (0, Exclam.Length)]);
-			} else if ((PlayerOne.GetButtonDown ("SecPole") || PlayerTwo.GetButtonDown ("SecPole")) && (RandomizedValue != 1)) {
+			} else if ((PlayerOne.GetButton ("SecPole") || PlayerTwo.GetButtonDown ("SecPole")) && (RandomizedValue != 1)) {
 				ShowEx1 = false;
 				ShowEx2 = false;
 				ShowEx3 = false;
 				ShowEx4 = false;
 				Debug.Log ("0 POINTS");
-			} else if ((PlayerOne.GetButtonDown ("ThirdPole") || PlayerTwo.GetButtonDown ("ThirdPole")) && (RandomizedValue == 2)) {
+			} else if ((PlayerOne.GetButton ("ThirdPole") || PlayerTwo.GetButtonDown ("ThirdPole")) && (RandomizedValue == 2)) {
 
 				ConditionsOfPole ();
 				// Add points
@@ -167,8 +172,17 @@ public class RandomValues : MonoBehaviour {
 			}
 			ObjectSelected = true;
 	}
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update() {
+        if (PlayerOne.GetButtonDown("Quit")){
+            GlobalData.players[0].SetActive(true);
+            GlobalData.players[1].SetActive(true);
+            GlobalData.camera.SetActive(true);
+            PlayerOne.controllers.maps.SetAllMapsEnabled(false);
+            PlayerOne.controllers.maps.SetMapsEnabled(true, "Default");
+            PlayerTwo.controllers.maps.SetMapsEnabled(true, "Default");
+            SceneManager.LoadScene("SceneOne");
+        }
 		ExclamationMarkConditions ();
 		ShowExclamationMark ();
 		CheckForCorrectness ();
