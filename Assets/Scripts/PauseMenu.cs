@@ -9,8 +9,8 @@ public class PauseMenu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject popupMenu = InGameMenuPopUp.GetComponentInParent<GameObject>();
-		pauseMenuShows = false;
+		Canvas popupMenu = InGameMenuPopUp.GetComponentInParent<Canvas>();
+        pauseMenuShows = false;
 	}
 	void onPause(){
 		if (Input.GetKeyDown (KeyCode.P)) {

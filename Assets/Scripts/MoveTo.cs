@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Allow us to use the NavMeshAgent type
 using UnityEngine.AI;
+using UnityEngine.UI;
 // Allow us to access our key mappings
 using Rewired;
 
@@ -57,6 +58,9 @@ public class MoveTo : MonoBehaviour {
     //Switch
     public GameObject Switch;
     private OnSwitch Change;
+
+    //Show dice number
+    public GameObject Dice;
     // Use this for initialization
     void Start() {
         
@@ -114,8 +118,12 @@ public class MoveTo : MonoBehaviour {
              // Move agent to the wordPos position
              agent.destination = wordPos;*/
             //int steps = (int)Random.Range(1, 6);
+            Dice.SetActive(true); 
             agent.isStopped = false;
-            end = current + (int)Random.Range(1, 5);
+            int step = (int)Random.Range(1, 5);
+            end = current + step;
+            Dice.transform.GetChild(0).gameObject.GetComponent<Text>().text = step.ToString();
+            StartCoroutine("Roll");
             //end = current + 2;
             //current = current + steps;
             //print(map.NextTile(current));
@@ -141,9 +149,11 @@ public class MoveTo : MonoBehaviour {
                 agent.isStopped = false;
             } else if (moved && agent.remainingDistance < agent.stoppingDistance)
             {
+                //Do all the end of turn stuff in here
                 print(current);
                 print(end);
                 agent.isStopped = true;
+                Dice.SetActive(false);
                 moved = false;
                 print("Arrived");
                 Change.TaskOnClick();
@@ -182,5 +192,10 @@ public class MoveTo : MonoBehaviour {
 
         // send input and other state parameters to the animator
         UpdateAnimator(move);
+    }
+    IEnumerator Roll()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Dice.SetActive(false);
     }
 }
