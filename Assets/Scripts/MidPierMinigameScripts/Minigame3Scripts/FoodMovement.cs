@@ -43,7 +43,7 @@ public class FoodMovement : MonoBehaviour {
 	private void CheckForCollisions(){
 		if (Time.timeScale == 0 && IngredientCollider.IsTouching (StickCollider)) {
 			print ("PLUS 1");
-			Destroy (gameObject);
+			//Destroy (gameObject);
 			//StickCollider.enabled = false;
 		}
 		//IngredientCollider.enabled = false;
@@ -51,6 +51,7 @@ public class FoodMovement : MonoBehaviour {
 	}
 	void StopMovement(){
 		if (Input.GetKeyDown ("space")) {
+			//transform.Translate (0,5f, 0);
 			Time.timeScale = 0;
 			//IngredientCollider.enabled = false;
 			CheckForCollisions ();
