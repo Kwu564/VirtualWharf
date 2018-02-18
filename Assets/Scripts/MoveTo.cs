@@ -33,7 +33,7 @@ public class MoveTo : MonoBehaviour {
 
     public bool isMoving;
     public bool moved = false;
-
+    private bool clicked = false;
     // Hides the variable below from the Inspector
     [HideInInspector]
     // The cursor's screen position
@@ -97,7 +97,7 @@ public class MoveTo : MonoBehaviour {
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = false;
         }
         // Detect key mapped input
-        if (ReInput.players.GetPlayer(id).GetButtonDown("action") && !moved && isMoving)
+        if (ReInput.players.GetPlayer(id).GetButtonDown("action") && !moved && isMoving && !clicked)
         {
             print(id);
             print(gameObject);
@@ -124,13 +124,12 @@ public class MoveTo : MonoBehaviour {
             end = current + step;
             Dice.transform.GetChild(0).gameObject.GetComponent<Text>().text = step.ToString();
             StartCoroutine("Roll");
+            clicked = true;
+
             //end = current + 2;
             //current = current + steps;
             //print(map.NextTile(current));
-            map.NextTile(end).GetComponent<CapsuleCollider>().enabled = true;
-            current = current + 1;
-            agent.destination = map.NextTile(current).transform.position;
-            moved = true;
+
         }
         else if (agent.remainingDistance > agent.stoppingDistance)
         {
@@ -142,7 +141,7 @@ public class MoveTo : MonoBehaviour {
            
             Move(Vector3.zero, false, false);
 
-            if (current < end)
+            if (current < end && moved)
             {
                 current++;
                 agent.destination = map.NextTile(current).transform.position;
@@ -155,6 +154,7 @@ public class MoveTo : MonoBehaviour {
                 agent.isStopped = true;
                 Dice.SetActive(false);
                 moved = false;
+                clicked = false;
                 print("Arrived");
                 Change.TaskOnClick();
                 
@@ -195,7 +195,12 @@ public class MoveTo : MonoBehaviour {
     }
     IEnumerator Roll()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
+        map.NextTile(end).GetComponent<CapsuleCollider>().enabled = true;
+        current = current + 1;
+        agent.destination = map.NextTile(current).transform.position;
+        
         Dice.SetActive(false);
+        moved = true;
     }
 }

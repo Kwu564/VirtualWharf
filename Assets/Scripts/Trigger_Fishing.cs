@@ -10,7 +10,7 @@ public class Trigger_Fishing : MonoBehaviour {
     {
         Change = Switch.GetComponent<OnSwitch>();
     }
-    void OnTriggerEnter (Collider other) {
+    void OnTriggerEnter2D (Collider2D other) {
         count++;
         if (count == 1)
         {
