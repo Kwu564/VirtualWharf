@@ -9,4 +9,7 @@ public class GlobalData{
     static public GameObject markers;
     static public bool created = false;
     static public int turn = 1;
+    static public List<GameObject> P1Inventory = new List<GameObject> ();
+    static public List<GameObject> P2Inventory = new List<GameObject>();
+    static public List<List<GameObject>> Inventory = new List<List<GameObject>> {P1Inventory,P2Inventory};
 }

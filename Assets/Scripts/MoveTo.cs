@@ -80,6 +80,7 @@ public class MoveTo : MonoBehaviour {
     }
     void Update()
     {
+        
         // Grab the current cursor position
         cursorPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
         // Set id to the current turn #,
@@ -95,6 +96,15 @@ public class MoveTo : MonoBehaviour {
         {
             GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = true;
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = false;
+        }
+        if (Input.GetKeyDown("n"))
+        {
+            foreach (GameObject item in GlobalData.P1Inventory)
+            {
+                print(item);
+                GameObject.Instantiate(item);
+            }
+            print(GlobalData.P1Inventory.Count);
         }
         // Detect key mapped input
         if (ReInput.players.GetPlayer(id).GetButtonDown("action") && !moved && isMoving && !clicked)
