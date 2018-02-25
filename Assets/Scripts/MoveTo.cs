@@ -61,7 +61,23 @@ public class MoveTo : MonoBehaviour {
 
     //Show dice number
     public GameObject Dice;
+
+    //Keep track of triggers
+    public bool triggered = false;
     // Use this for initialization
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        if (GlobalData.players[id] == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            GlobalData.players[id] = gameObject;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start() {
         
         // Get the NavMeshAgent component of this game object
@@ -85,7 +101,7 @@ public class MoveTo : MonoBehaviour {
         cursorPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
         // Set id to the current turn #,
         // This determines whose turn it is
-        id = GlobalData.turn;
+        //id = GlobalData.turn;
         // Continuously check the player id
         if (GlobalData.turn == 0)
         {
@@ -206,7 +222,7 @@ public class MoveTo : MonoBehaviour {
     IEnumerator Roll()
     {
         yield return new WaitForSeconds(1.0f);
-        map.NextTile(end).GetComponent<CapsuleCollider>().enabled = true;
+        map.NextTile(end).GetComponent<Collider>().enabled = true;
         current = current + 1;
         agent.destination = map.NextTile(current).transform.position;
         

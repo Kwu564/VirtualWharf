@@ -12,10 +12,12 @@ public class FoodMovement : MonoBehaviour {
 	private float StartY;
 	private float StartZ;
 	public bool Flip;
+	public bool HasCollided;
 	public CircleCollider2D IngredientCollider;
 	public CircleCollider2D StickCollider;
 	// Use this for initialization
 	void Start () {
+		HasCollided = false;
 		//StickCollider = GameObject.FindGameObjectWithTag ("StickColliderTag").GetComponent<CircleCollider2D> ();
 		StartX = transform.position.x;
 		StartY = transform.position.y;
@@ -43,6 +45,7 @@ public class FoodMovement : MonoBehaviour {
 	private void CheckForCollisions(){
 		if (Time.timeScale == 0 && IngredientCollider.IsTouching (StickCollider)) {
 			print ("PLUS 1");
+			HasCollided = true;
 			//Destroy (gameObject);
 			//StickCollider.enabled = false;
 		}

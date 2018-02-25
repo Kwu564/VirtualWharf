@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Scaler : MonoBehaviour {
     public float speed;
     private Collider2D scaler;
@@ -12,6 +13,11 @@ public class Scaler : MonoBehaviour {
     public bool on;
     public int HP = 17;
     public Slider Health;
+
+    public GameObject p1, p2;
+    public GameObject cam;
+    public GameObject triggers;
+
     [SerializeField] private int id;
     // Use this for initialization
     void Start () {
@@ -23,6 +29,11 @@ public class Scaler : MonoBehaviour {
 	void Update () {
         var move = new Vector2(ReInput.players.GetPlayer(id).GetAxis("Scale"), 0);
         rgb2d.velocity = (move * speed * Time.deltaTime);
+        if (Input.GetKeyDown("k"))
+        {
+            
+            SceneManager.LoadScene("sceneOne");
+        }
         if(move == Vector2.zero)
         {
             rgb2d.velocity = Vector2.zero;

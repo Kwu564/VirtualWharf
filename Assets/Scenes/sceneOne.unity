@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1069,6 +1069,7 @@ GameObject:
   - component: {fileID: 50072275}
   - component: {fileID: 50072280}
   - component: {fileID: 50072279}
+  - component: {fileID: 50072281}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1193,6 +1194,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 50072274}
+--- !u!114 &50072281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 50072274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992feec4267af9641a7bc3dbe6c8997a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &50123631
 Prefab:
   m_ObjectHideFlags: 0
@@ -3710,6 +3722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 144897965}
   - component: {fileID: 144897964}
+  - component: {fileID: 144897966}
   m_Layer: 0
   m_Name: Rewired Input Manager
   m_TagString: Untagged
@@ -4202,6 +4215,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144897966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144897963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd670216329b4ee47b46f729700fef70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p1: {fileID: 2067443247}
+  p2: {fileID: 1307100080}
+  cam: {fileID: 773818463}
+  triggers: {fileID: 896956303}
 --- !u!1001 &149214904
 Prefab:
   m_ObjectHideFlags: 0
@@ -6696,8 +6724,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 277726590}
-  m_LocalRotation: {x: 0.057162195, y: 0.9416352, z: 0.25787902, w: -0.20869628}
-  m_LocalPosition: {x: -109.34585, y: -40.017635, z: -345.81656}
+  m_LocalRotation: {x: 0.087172285, y: 0.89959055, z: 0.21045254, w: -0.37262255}
+  m_LocalPosition: {x: -149.56032, y: -19.876034, z: -369.9742}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 654676019}
@@ -15553,7 +15581,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 680932083}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -22044,7 +22072,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 954933291}
   m_OnClick:
     m_PersistentCalls:
@@ -22057,7 +22085,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954933288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -22090,7 +22118,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954933288}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d51ae582d3a04f47b29c422abddab17, type: 3}
   m_Name: 
@@ -30584,6 +30612,7 @@ MonoBehaviour:
   current: 0
   Switch: {fileID: 954933288}
   Dice: {fileID: 800496128}
+  triggered: 0
 --- !u!195 &1307100084 stripped
 NavMeshAgent:
   m_PrefabParentObject: {fileID: 195128844724447440, guid: 89f72d24cd6a26f4fa73ac596854f4f1,
@@ -31610,25 +31639,27 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1338562003}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd4d423c77eebd94186ad60b319d9740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Switch: {fileID: 954933288}
---- !u!136 &1338562005
-CapsuleCollider:
+  p1: {fileID: 2067443247}
+  p2: {fileID: 1307100080}
+  cam: {fileID: 773818463}
+  triggers: {fileID: 896956303}
+--- !u!135 &1338562005
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1338562003}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 0.99999994
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.00000011920929, z: 0}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.27
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1339139969
 Prefab:
   m_ObjectHideFlags: 0
@@ -48549,12 +48580,13 @@ MonoBehaviour:
   isMoving: 0
   moved: 0
   cursorPos: {x: 0, y: 0, z: 0}
-  id: 0
+  id: 1
   agent: {fileID: 2067443251}
   wharf: {fileID: 896956303}
   current: 0
   Switch: {fileID: 954933288}
   Dice: {fileID: 800496128}
+  triggered: 0
 --- !u!195 &2067443251 stripped
 NavMeshAgent:
   m_PrefabParentObject: {fileID: 195001108704570310, guid: bc8148f9447beb647b57b5abc5a8676d,

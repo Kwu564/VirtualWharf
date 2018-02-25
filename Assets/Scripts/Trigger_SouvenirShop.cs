@@ -1,39 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Trigger_SouvenirShop : MonoBehaviour {
-    int count = 0;
-    public GameObject Switch;
-    private OnSwitch Change;
+    public GameObject p1, p2;
+    public GameObject cam;
+    public GameObject triggers;
+    //private bool triggered = false;
     void Start()
     {
-        Change = Switch.GetComponent<OnSwitch>();
+
     }
     void OnTriggerEnter (Collider other) {
         //other.gameObject.GetComponent<MoveTo>().agent[GlobalData.turn].isStopped = true;
-        if (other.gameObject.name == "Player" + (GlobalData.turn + 1))
+        bool trigger = other.gameObject.GetComponent<MoveTo>().triggered;
+        if (!trigger)
         {
-            Change.TaskOnClick();
+            other.gameObject.GetComponent<MoveTo>().triggered = true;
+            p1.SetActive(false);
+            p2.SetActive(false);
+            cam.SetActive(false);
+            triggers.SetActive(false);
+            SceneManager.LoadScene("Minigame1");
+            //gameObject.SetActive(false);
+            
         }
-        count++;
-        if (count == 1)
-        {
-            if (other.gameObject.name == "Player1")
-            {
-                Debug.Log("Player1 has entered the SouvenirShop");
-            }
-            else if (other.gameObject.name == "Player2")
-            {
-                Debug.Log("Player2 has entered the SouvenirShop");
-            }
-            // If count is 2
-        } else
-        {
-            Debug.Log("Player1 and Player2 have entered the SouvenirShop");
-        }
-        
-        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+       
+        //gameObject.GetComponent<Collider>().enabled = false;
     }
 	
 	void OnTriggerStay () {
@@ -42,14 +35,6 @@ public class Trigger_SouvenirShop : MonoBehaviour {
 
     void OnTriggerExit (Collider other)
     {
-        count--;
-        if (other.gameObject.name == "Player1")
-        {
-            Debug.Log("Player1 has left the SouvenirShop");
-        }
-        else if (other.gameObject.name == "Player2")
-        {
-            Debug.Log("Player2 has left the SouvenirShop");
-        }
+        other.gameObject.GetComponent<MoveTo>().triggered = false;
     } 
 }
