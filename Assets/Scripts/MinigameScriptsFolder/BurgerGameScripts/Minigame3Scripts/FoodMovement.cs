@@ -46,18 +46,16 @@ public class FoodMovement : MonoBehaviour {
 		if (Time.timeScale == 0 && IngredientCollider.IsTouching (StickCollider)) {
 			print ("PLUS 1");
 			HasCollided = true;
-			//Destroy (gameObject);
-			//StickCollider.enabled = false;
 		}
-		//IngredientCollider.enabled = false;
-
 	}
 	void StopMovement(){
 		if (Input.GetKeyDown ("space")) {
+
 			//transform.Translate (0,5f, 0);
 			Time.timeScale = 0;
 			//IngredientCollider.enabled = false;
 			CheckForCollisions ();
+
 		}
 	//	CheckForCollisions ();
 
@@ -66,6 +64,7 @@ public class FoodMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		StopMovement ();
+		//StartCoroutine ("WaitToShowResultForLevel");
 		//CheckForCollisions ();
 
 		/*if (transform.position.x >= EndingPosition && !Flip) {

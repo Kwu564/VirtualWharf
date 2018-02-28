@@ -33,6 +33,17 @@ public class LoadWorld : MonoBehaviour {
         {
             p1.SetActive(true);
             p2.SetActive(true);
+            if (GlobalData.turn == 0)
+            {
+                p1.GetComponent<MoveTo>().Continue();
+                p1.GetComponent<MoveTo>().moved = true;
+            }
+            else
+            {
+                p2.GetComponent<MoveTo>().Continue();
+                p2.GetComponent<MoveTo>().moved = true;
+                print("loaded p2");
+            }
             cam.SetActive(true);
             triggers.SetActive(true);
         }

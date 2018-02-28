@@ -7,6 +7,7 @@ public class GlobalData{
     static public GameObject [] players = new GameObject[2];
     static public GameObject camera;
     static public GameObject markers;
+    static public bool[] moved = { false, false };
     static public bool created = false;
     static public int turn = 1;
     static public List<GameObject> P1Inventory = new List<GameObject> ();

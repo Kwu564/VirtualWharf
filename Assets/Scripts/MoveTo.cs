@@ -146,7 +146,7 @@ public class MoveTo : MonoBehaviour {
             //int steps = (int)Random.Range(1, 6);
             Dice.SetActive(true); 
             agent.isStopped = false;
-            int step = (int)Random.Range(1, 5);
+            int step = (int)Random.Range(2,2);
             end = current + step;
             Dice.transform.GetChild(0).gameObject.GetComponent<Text>().text = step.ToString();
             StartCoroutine("Roll");
@@ -166,19 +166,18 @@ public class MoveTo : MonoBehaviour {
         {
            
             Move(Vector3.zero, false, false);
-
             if (current < end && moved)
             {
                 current++;
                 agent.destination = map.NextTile(current).transform.position;
                 agent.isStopped = false;
-            } else if (moved && agent.remainingDistance < agent.stoppingDistance)
+            } else if (moved)
             {
                 //Do all the end of turn stuff in here
                 print(current);
                 print(end);
+                //map.NextTile(end).SendMessage("OnTriggerEnter",gameObject.GetComponent<Collider>());
                 agent.isStopped = true;
-                Dice.SetActive(false);
                 moved = false;
                 clicked = false;
                 print("Arrived");
@@ -186,6 +185,7 @@ public class MoveTo : MonoBehaviour {
                 
                // agent.isStopped = true;
             }
+
         }
     }
 
@@ -219,10 +219,15 @@ public class MoveTo : MonoBehaviour {
         // send input and other state parameters to the animator
         UpdateAnimator(move);
     }
+
+    public void Continue()
+    {
+        agent.destination = map.NextTile(current).transform.position;
+    }
     IEnumerator Roll()
     {
         yield return new WaitForSeconds(1.0f);
-        map.NextTile(end).GetComponent<Collider>().enabled = true;
+        //map.NextTile(end).GetComponent<Collider>().enabled = true;
         current = current + 1;
         agent.destination = map.NextTile(current).transform.position;
         

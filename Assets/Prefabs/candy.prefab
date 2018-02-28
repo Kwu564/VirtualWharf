@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4022105086584754}
   - component: {fileID: 212248714881299072}
   - component: {fileID: 50926569015884538}
-  - component: {fileID: 114581945735072710}
   m_Layer: 0
   m_Name: candy
   m_TagString: Untagged
@@ -56,23 +55,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114581945735072710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1209944449118398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd384d140a40edd43a1460635061673e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212248714881299072
 SpriteRenderer:
   m_ObjectHideFlags: 1
