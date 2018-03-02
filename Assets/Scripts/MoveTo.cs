@@ -54,7 +54,7 @@ public class MoveTo : MonoBehaviour {
 
     //Keep track of steps
     public int current = 0;
-    private int end = -1;
+    public int end = -1;
     //Switch
     public GameObject Switch;
     private OnSwitch Change;
@@ -103,7 +103,7 @@ public class MoveTo : MonoBehaviour {
         // This determines whose turn it is
         //id = GlobalData.turn;
         // Continuously check the player id
-        if (GlobalData.turn == 0)
+        /*if (GlobalData.turn == 0)
         {
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving= true;
             GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = false;
@@ -112,7 +112,7 @@ public class MoveTo : MonoBehaviour {
         {
             GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = true;
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = false;
-        }
+        }*/
         if (Input.GetKeyDown("n"))
         {
             foreach (GameObject item in GlobalData.P1Inventory)
@@ -146,7 +146,7 @@ public class MoveTo : MonoBehaviour {
             //int steps = (int)Random.Range(1, 6);
             Dice.SetActive(true); 
             agent.isStopped = false;
-            int step = (int)Random.Range(2,2);
+            int step = (int)Random.Range(1.9f,5.9f);
             end = current + step;
             Dice.transform.GetChild(0).gameObject.GetComponent<Text>().text = step.ToString();
             StartCoroutine("Roll");
@@ -174,16 +174,17 @@ public class MoveTo : MonoBehaviour {
             } else if (moved)
             {
                 //Do all the end of turn stuff in here
-                print(current);
-                print(end);
+                //print(current);
+                //print(end);
                 //map.NextTile(end).SendMessage("OnTriggerEnter",gameObject.GetComponent<Collider>());
                 agent.isStopped = true;
-                moved = false;
+                
                 clicked = false;
                 print("Arrived");
+                moved = false;
                 Change.TaskOnClick();
                 
-               // agent.isStopped = true;
+                // agent.isStopped = true;
             }
 
         }

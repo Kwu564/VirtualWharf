@@ -23,9 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/Minigame2.unity
     guid: 8839e59eaf1097a4d88e1e52cdcf316c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Prefabs/BurgerGameScenes/Minigame3/Minigame3.unity
-    guid: 1d01e2b2343e21446a88e2dd798ad17d
-  - enabled: 1
-    path: Assets/Scenes/MinigameScenes/Minigame1/Minigame1.unity
+    path: Assets/Scenes/MinigameScenes/FishScalerScenes/Minigame1/Minigame1.unity
     guid: c4d5cd993a79e2e4783d2d6f32dbc5f2

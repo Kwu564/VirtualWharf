@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FoodMovement : MonoBehaviour {
+    public int player, round;
 	float XSpeed;
 	public float ValueOfXSpeed;
 	public float StartingPosition;
@@ -45,6 +46,7 @@ public class FoodMovement : MonoBehaviour {
 	private void CheckForCollisions(){
 		if (Time.timeScale == 0 && IngredientCollider.IsTouching (StickCollider)) {
 			print ("PLUS 1");
+            Minigame3Data.Scores[player,round] += 100;
 			HasCollided = true;
 		}
 	}

@@ -7,7 +7,7 @@ public class LoadWorld : MonoBehaviour {
     public GameObject p1, p2;
     public GameObject cam;
     public GameObject triggers;
-    private void OnEnable()
+    private void Awake()
     {
         SceneManager.sceneLoaded += OnLevelLoad;
 
@@ -29,21 +29,25 @@ public class LoadWorld : MonoBehaviour {
 
     void OnLevelLoad(Scene scene,LoadSceneMode mode)
     {
+        print("Load");
         if (scene.name == "sceneOne")
         {
             p1.SetActive(true);
             p2.SetActive(true);
-            if (GlobalData.turn == 0)
-            {
+            /*if (p1.GetComponent<MoveTo>().moved == false)
+            {*/
                 p1.GetComponent<MoveTo>().Continue();
-                p1.GetComponent<MoveTo>().moved = true;
-            }
-            else
-            {
+                //p1.GetComponent<MoveTo>().moved = true;
+                //p2.GetComponent<MoveTo>().moved = false;
+            //}
+            /*else
+            {*/
                 p2.GetComponent<MoveTo>().Continue();
-                p2.GetComponent<MoveTo>().moved = true;
+                //p2.GetComponent<MoveTo>().moved = true;
+                //p1.GetComponent<MoveTo>().moved = false;
                 print("loaded p2");
-            }
+            //}
+            print("Turn:" + GlobalData.turn);
             cam.SetActive(true);
             triggers.SetActive(true);
         }

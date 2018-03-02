@@ -33,9 +33,9 @@ public class RandomValues : MonoBehaviour {
 	void Start (){
 		PlayerOne=ReInput.players.GetPlayer (0);
 		PlayerTwo = ReInput.players.GetPlayer (1);
-        PlayerOne.controllers.maps.SetAllMapsEnabled(false);
-        PlayerOne.controllers.maps.SetMapsEnabled(true, "game1");
-        PlayerTwo.controllers.maps.SetMapsEnabled(true, "game1");
+        //PlayerOne.controllers.maps.SetAllMapsEnabled(false);
+        //PlayerOne.controllers.maps.SetMapsEnabled(true, "game1");
+        //PlayerTwo.controllers.maps.SetMapsEnabled(true, "game1");
 
         RandomizedValue = (Exclam [Random.Range (0, Exclam.Length)]);
 		ShowEx1 = false;

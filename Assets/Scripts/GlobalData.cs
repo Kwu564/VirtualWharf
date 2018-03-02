@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalData{
-    static public int score = 0;
+public static class GlobalData{
+    static public int[] GlobalScore = { 0, 0 };
     static public GameObject [] players = new GameObject[2];
     static public GameObject camera;
     static public GameObject markers;

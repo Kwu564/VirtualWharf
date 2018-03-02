@@ -12,7 +12,7 @@ public class OnSwitch : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
-        GlobalData.turn = 0;
+        //GlobalData.turn = 0;
         //GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = true;
         //GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = false;
     }
@@ -27,24 +27,28 @@ public class OnSwitch : MonoBehaviour {
     // Click triggers switch
     public void TaskOnClick()
     {
-        if (GlobalData.turn == 0)
+        if (GameObject.Find("Player1").GetComponent<MoveTo>().isMoving)
         {
             cam.GetComponent<CameraFollow>().target = Player2.transform;
+            GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = false;
+            GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = true;
             GameObject.Find("Player2").GetComponent<MoveTo>().moved = false;
             Debug.Log("Switch to 2");
             /*GameObject.Find("Player2").GetComponent<MoveTo>().agent.isStopped = true;
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = true;            
             GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = false;*/
-            GlobalData.turn = 1;
-        } else if (GlobalData.turn == 1)
+            GlobalData.turn += 1;
+        } else
         {
             cam.GetComponent<CameraFollow>().target = Player1.transform;
+            GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = true;
+            GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = false;
             GameObject.Find("Player1").GetComponent<MoveTo>().moved = false;
             Debug.Log("Switch to 1");
             /*GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = true;
             GameObject.Find("Player1").GetComponent<MoveTo>().agent.isStopped = true;
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = false;*/
-            GlobalData.turn = 0;
+            GlobalData.turn += 1;
         }
         Debug.Log("Switch players!");
     }
