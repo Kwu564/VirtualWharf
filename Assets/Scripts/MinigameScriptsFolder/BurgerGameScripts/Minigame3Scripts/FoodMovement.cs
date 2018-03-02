@@ -16,6 +16,7 @@ public class FoodMovement : MonoBehaviour {
 	public bool HasCollided;
 	public CircleCollider2D IngredientCollider;
 	public CircleCollider2D StickCollider;
+	public Camera cam; 
 	// Use this for initialization
 	void Start () {
 		HasCollided = false;
@@ -35,9 +36,9 @@ public class FoodMovement : MonoBehaviour {
         transform.position = new Vector3 (StartX, StartY, StartZ);
 		if (!Flip) {
 			StartingPosition = this.transform.position.x;
-			EndingPosition = this.transform.position.x + Screen.width;
+			EndingPosition = this.transform.position.x + cam.pixelWidth;
 		} else {
-			EndingPosition = this.transform.position.x - Screen.width;
+			EndingPosition = this.transform.position.x - cam.pixelWidth;
 			StartingPosition = this.transform.position.x;
 			StartX = StartingPosition;
 		}
