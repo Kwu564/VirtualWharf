@@ -758,8 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
-  round: 0
+  player: 1
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -767,7 +766,8 @@ MonoBehaviour:
   HasCollided: 0
   IngredientCollider: {fileID: 335473336}
   StickCollider: {fileID: 270055351}
-  cam: {fileID: 0}
+  cam: {fileID: 629911984}
+  cafe: {fileID: 0}
 --- !u!114 &335473338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,7 +960,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  round: 0
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -969,6 +968,7 @@ MonoBehaviour:
   IngredientCollider: {fileID: 392935727}
   StickCollider: {fileID: 1433735777}
   cam: {fileID: 1255558086}
+  cafe: {fileID: 0}
 --- !u!1 &400493040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1001,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -569.65, y: 160.21}
+  m_AnchoredPosition: {x: -252.78, y: 283.2}
   m_SizeDelta: {x: 85.54, y: 31.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &400493042
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 400493040}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1177,7 +1177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 12.72, y: 220.3}
+  m_AnchoredPosition: {x: 12.72, y: 244.59998}
   m_SizeDelta: {x: 18.399994, y: 408.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442684485
@@ -1191,9 +1191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4ce28f8104cdd49b84979d959da5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ToothpickCollider: {fileID: 442684488}
-  LastStickCollider: {fileID: 1840035637}
-  stop: 410
+  stop: {fileID: 1840035634}
+  player: 0
 --- !u!114 &442684486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,7 +1232,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 442684483}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1272,96 +1271,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &465579281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 465579282}
-  - component: {fileID: 465579285}
-  - component: {fileID: 465579284}
-  - component: {fileID: 465579283}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &465579282
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 465579281}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1732427843}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34.297867, y: 157.57503}
-  m_SizeDelta: {x: 494.8, y: 115.65}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &465579283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 465579281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0221bbfb6b6c0645b5c5b9ba7c9d30e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: 0
-  round: 0
-  FailIcon: {fileID: 1027061565}
-  SucceedIcon: {fileID: 2108949938}
---- !u!114 &465579284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 465579281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 470c8d0b356aa9a4aae4ec31a09143bd, type: 3}
-    m_FontSize: 55
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 78
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Score: '
---- !u!222 &465579285
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 465579281}
 --- !u!1 &474433714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,7 +1519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  round: 0
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -1619,6 +1527,7 @@ MonoBehaviour:
   IngredientCollider: {fileID: 552928128}
   StickCollider: {fileID: 97269217}
   cam: {fileID: 1255558086}
+  cafe: {fileID: 0}
 --- !u!114 &552928126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,6 +1576,95 @@ CircleCollider2D:
   m_Offset: {x: 2, y: 0}
   serializedVersion: 2
   m_Radius: 8.6
+--- !u!1 &587454764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 587454765}
+  - component: {fileID: 587454767}
+  - component: {fileID: 587454766}
+  - component: {fileID: 587454768}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &587454765
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587454764}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 9.999755}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2138542748}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 61.5, y: 91.02}
+  m_SizeDelta: {x: 392.7, y: 115}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &587454766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587454764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 470c8d0b356aa9a4aae4ec31a09143bd, type: 3}
+    m_FontSize: 69
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 69
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &587454767
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587454764}
+--- !u!114 &587454768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 587454764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0221bbfb6b6c0645b5c5b9ba7c9d30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: 0
+  FailIcon: {fileID: 400493042}
+  SucceedIcon: {fileID: 807564730}
 --- !u!1 &616957351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,7 +1780,6 @@ GameObject:
   - component: {fileID: 629911985}
   - component: {fileID: 629911984}
   - component: {fileID: 629911983}
-  - component: {fileID: 629911982}
   - component: {fileID: 629911981}
   m_Layer: 0
   m_Name: Main Camera (1)
@@ -1802,13 +1799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac28d0c6a8e31e84ea07ddf6672dee3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &629911982
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 629911980}
-  m_Enabled: 1
 --- !u!124 &629911983
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1963,7 +1953,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  round: 0
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -1972,6 +1961,7 @@ MonoBehaviour:
   IngredientCollider: {fileID: 723247445}
   StickCollider: {fileID: 1645371085}
   cam: {fileID: 1255558086}
+  cafe: {fileID: 0}
 --- !u!1 &807564728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,7 +1994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -569.8, y: 180.9}
+  m_AnchoredPosition: {x: -252, y: 302}
   m_SizeDelta: {x: 87.1, y: 69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &807564730
@@ -2013,7 +2003,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 807564728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -2088,8 +2078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
-  round: 0
+  player: 1
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -2097,7 +2086,8 @@ MonoBehaviour:
   HasCollided: 0
   IngredientCollider: {fileID: 807681637}
   StickCollider: {fileID: 1509806570}
-  cam: {fileID: 0}
+  cam: {fileID: 629911984}
+  cafe: {fileID: 0}
 --- !u!58 &807681637
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2210,7 +2200,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 875162338}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -2240,9 +2230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4ce28f8104cdd49b84979d959da5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ToothpickCollider: {fileID: 875162341}
-  LastStickCollider: {fileID: 1633242839}
-  stop: 410
+  stop: {fileID: 1633242838}
+  player: 0
 --- !u!114 &875162343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2373,7 +2362,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  round: 0
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -2382,6 +2370,7 @@ MonoBehaviour:
   IngredientCollider: {fileID: 886943806}
   StickCollider: {fileID: 1219841343}
   cam: {fileID: 1255558086}
+  cafe: {fileID: 0}
 --- !u!1 &1027061563
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,7 +2387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1027061564
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2410,7 +2399,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1732427843}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2498,8 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
-  round: 0
+  player: 1
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -2507,7 +2495,8 @@ MonoBehaviour:
   HasCollided: 0
   IngredientCollider: {fileID: 1056186320}
   StickCollider: {fileID: 616957352}
-  cam: {fileID: 0}
+  cam: {fileID: 629911984}
+  cafe: {fileID: 0}
 --- !u!58 &1056186320
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2758,7 +2747,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  round: 0
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -2767,6 +2755,7 @@ MonoBehaviour:
   IngredientCollider: {fileID: 1077468815}
   StickCollider: {fileID: 438538950}
   cam: {fileID: 1255558086}
+  cafe: {fileID: 0}
 --- !u!1 &1112574501
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,8 +2804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
-  round: 0
+  player: 1
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -2824,7 +2812,8 @@ MonoBehaviour:
   HasCollided: 0
   IngredientCollider: {fileID: 1112574504}
   StickCollider: {fileID: 1972730144}
-  cam: {fileID: 0}
+  cam: {fileID: 629911984}
+  cafe: {fileID: 0}
 --- !u!58 &1112574504
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2936,8 +2925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
-  round: 0
+  player: 1
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -2945,7 +2933,8 @@ MonoBehaviour:
   HasCollided: 0
   IngredientCollider: {fileID: 1206495086}
   StickCollider: {fileID: 1393981708}
-  cam: {fileID: 0}
+  cam: {fileID: 629911984}
+  cafe: {fileID: 0}
 --- !u!114 &1206495088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3133,7 +3122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  round: 0
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -3142,6 +3130,7 @@ MonoBehaviour:
   IngredientCollider: {fileID: 1246404393}
   StickCollider: {fileID: 1752868177}
   cam: {fileID: 1255558086}
+  cafe: {fileID: 0}
 --- !u!114 &1246404391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3752,8 +3741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
-  round: 0
+  player: 1
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -3761,7 +3749,8 @@ MonoBehaviour:
   HasCollided: 0
   IngredientCollider: {fileID: 1496588975}
   StickCollider: {fileID: 129492245}
-  cam: {fileID: 0}
+  cam: {fileID: 629911984}
+  cafe: {fileID: 0}
 --- !u!58 &1496588975
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4039,7 +4028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.2, y: -150.6}
+  m_AnchoredPosition: {x: 15.63002, y: 97}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1645371082
@@ -4211,7 +4200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  round: 0
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -4220,6 +4208,7 @@ MonoBehaviour:
   IngredientCollider: {fileID: 1661363568}
   StickCollider: {fileID: 1968751028}
   cam: {fileID: 1255558086}
+  cafe: {fileID: 0}
 --- !u!114 &1661363570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4301,8 +4290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
-  round: 0
+  player: 1
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -4310,7 +4298,8 @@ MonoBehaviour:
   HasCollided: 0
   IngredientCollider: {fileID: 1665067287}
   StickCollider: {fileID: 1056635207}
-  cam: {fileID: 0}
+  cam: {fileID: 629911984}
+  cafe: {fileID: 0}
 --- !u!58 &1665067287
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4407,7 +4396,6 @@ RectTransform:
   - {fileID: 807681635}
   - {fileID: 1056186318}
   - {fileID: 1665067285}
-  - {fileID: 465579282}
   - {fileID: 1027061564}
   - {fileID: 2108949937}
   m_Father: {fileID: 474433715}
@@ -4514,8 +4502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
-  round: 0
+  player: 1
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -4523,7 +4510,8 @@ MonoBehaviour:
   HasCollided: 0
   IngredientCollider: {fileID: 1749145181}
   StickCollider: {fileID: 1348862211}
-  cam: {fileID: 0}
+  cam: {fileID: 629911984}
+  cafe: {fileID: 0}
 --- !u!114 &1749145183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4759,7 +4747,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  round: 0
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -4768,6 +4755,7 @@ MonoBehaviour:
   IngredientCollider: {fileID: 1772785743}
   StickCollider: {fileID: 288383149}
   cam: {fileID: 1255558086}
+  cafe: {fileID: 0}
 --- !u!1 &1839392954
 GameObject:
   m_ObjectHideFlags: 0
@@ -4846,8 +4834,6 @@ GameObject:
   - component: {fileID: 1840035635}
   - component: {fileID: 1840035639}
   - component: {fileID: 1840035638}
-  - component: {fileID: 1840035636}
-  - component: {fileID: 1840035637}
   - component: {fileID: 1840035640}
   m_Layer: 5
   m_Name: ToothpickColliderHelper
@@ -4871,54 +4857,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.2, y: -150.6}
+  m_AnchoredPosition: {x: 15.630023, y: 97}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!50 &1840035636
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1840035634}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 1
-  m_Constraints: 7
---- !u!61 &1840035637
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1840035634}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 9.67}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 171.5, y: 64.3}
-  m_EdgeRadius: 0
 --- !u!114 &1840035638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5173,96 +5114,6 @@ RectTransform:
   m_AnchoredPosition: {x: 11.4, y: -22.9}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2086917510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2086917511}
-  - component: {fileID: 2086917514}
-  - component: {fileID: 2086917513}
-  - component: {fileID: 2086917512}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2086917511
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2086917510}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2138542748}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -147, y: 137}
-  m_SizeDelta: {x: 494.8, y: 115.65}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2086917512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2086917510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0221bbfb6b6c0645b5c5b9ba7c9d30e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: 0
-  round: 0
-  FailIcon: {fileID: 400493042}
-  SucceedIcon: {fileID: 807564730}
---- !u!114 &2086917513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2086917510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 470c8d0b356aa9a4aae4ec31a09143bd, type: 3}
-    m_FontSize: 55
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 78
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Score: '
---- !u!222 &2086917514
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2086917510}
 --- !u!1 &2108949936
 GameObject:
   m_ObjectHideFlags: 0
@@ -5279,7 +5130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2108949937
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5291,7 +5142,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1732427843}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5428,7 +5279,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  round: 0
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -5437,6 +5287,7 @@ MonoBehaviour:
   IngredientCollider: {fileID: 2117454856}
   StickCollider: {fileID: 1317432232}
   cam: {fileID: 1255558086}
+  cafe: {fileID: 0}
 --- !u!1 &2135777798
 GameObject:
   m_ObjectHideFlags: 0
@@ -5485,8 +5336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 0
-  round: 0
+  player: 1
   ValueOfXSpeed: 1
   StartingPosition: 0
   EndingPosition: 0
@@ -5494,7 +5344,8 @@ MonoBehaviour:
   HasCollided: 0
   IngredientCollider: {fileID: 2135777801}
   StickCollider: {fileID: 527667910}
-  cam: {fileID: 0}
+  cam: {fileID: 629911984}
+  cafe: {fileID: 0}
 --- !u!58 &2135777801
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5591,7 +5442,7 @@ RectTransform:
   - {fileID: 1077468814}
   - {fileID: 1772785742}
   - {fileID: 392935726}
-  - {fileID: 2086917511}
+  - {fileID: 587454765}
   - {fileID: 400493041}
   - {fileID: 807564729}
   m_Father: {fileID: 92601640}

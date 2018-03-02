@@ -7,6 +7,9 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 	public float Speed;
 	private Rigidbody2D CandyBox;
 	private SpriteRenderer SRenderer;
+	public Image CandyBoxMeter;
+
+
 	public int CandyCounter;
 	public Sprite RedLicoriceWheelBox;
 	public Sprite LicoricePastelsBox;
@@ -18,6 +21,7 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 	void Start () {
 		CandyBox=gameObject.GetComponent<Rigidbody2D> ();
 		CandyCounter = 0;
+		CandyBoxMeter.fillAmount = 0f;
 		SRenderer = GetComponent<SpriteRenderer> ();
 		SRenderer.sprite = RedLicoriceWheelBox;
 	}
@@ -66,9 +70,11 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D Col){
 		if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag == "RedLicoriceWheels") && (SRenderer.sprite == RedLicoriceWheelBox)) {
 			CandyCounter += 1;
+			CandyBoxMeter.fillAmount += 0.5f;
 			Destroy (Col.gameObject);
 		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "RedLicoriceWheels") && (SRenderer.sprite == RedLicoriceWheelBox)) {
 			CandyCounter = 0;
+			CandyBoxMeter.fillAmount = 0f;
 			Destroy (Col.gameObject);
 		}
 		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "LicoricePastels") && (SRenderer.sprite== LicoricePastelsBox) ){

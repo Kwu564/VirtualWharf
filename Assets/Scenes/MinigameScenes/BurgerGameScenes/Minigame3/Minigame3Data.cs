@@ -5,6 +5,8 @@ using UnityEngine;
 public class Minigame3Data {
     static public int[,] Scores = new int[2,4];
     static public string Name = "name";
+    static public int[,] Checked = new int[2,4];
+    static public int round = 0;
     public void ClearScores()
     {
         for(int x = 0; x < 2; x++)

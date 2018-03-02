@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class score : MonoBehaviour {
-    public int player, round;
+    public int player;
 	public Image FailIcon;
 	public Image SucceedIcon;
 	// Use this for initialization
@@ -15,12 +15,14 @@ public class score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        gameObject.GetComponent<Text>().text = Minigame3Data.Scores[player,round].ToString();
-		if (Minigame3Data.Scores [player, round] == 900) {
+        //gameObject.GetComponent<Text>().text = Minigame3Data.Scores[player,Minigame3Data.round].ToString();
+		if (Minigame3Data.Scores [player,Minigame3Data.round] == 900 && Minigame3Data.Checked[player, Minigame3Data.round] == 9) {
 			SucceedIcon.enabled = true;
+            //print("Win");
 			gameObject.GetComponent<Text> ().text = "You win!";
-		} else if (Minigame3Data.Scores [player, round] != 900 && Time.deltaTime==0) {
-			FailIcon.enabled = true;
+		} else if (Minigame3Data.Checked[player, Minigame3Data.round] == 9) {
+            //print("Lose");
+            FailIcon.enabled = true;
 		}
 	}
 }
