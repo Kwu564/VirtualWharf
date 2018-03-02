@@ -6,6 +6,11 @@ TagManager:
   tags:
   - StickColliderTag
   - Side1
+  - SaltWaterTaffy
+  - LicoricePastels
+  - PeachyOs
+  - RedLicoriceWheels
+  - DarkChocolateRockyRoadBits
   layers:
   - Default
   - TransparentFX

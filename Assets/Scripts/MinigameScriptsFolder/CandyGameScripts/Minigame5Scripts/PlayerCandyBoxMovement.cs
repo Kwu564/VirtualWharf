@@ -29,7 +29,7 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 			SRenderer.sprite = LicoricePastelsBox;
 			CandyCounter = 0;
 		}
-		if (CandyCounter == 15 && SRenderer.sprite == LicoricePastelsBox) {
+		if (CandyCounter == 35 && SRenderer.sprite == LicoricePastelsBox) {
 			SRenderer.sprite = DarkChocolateRockyRoadBitsBox;
 			CandyCounter = 0;
 		}
@@ -41,7 +41,7 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 			SRenderer.sprite = SaltWaterTaffyBox;
 			CandyCounter = 0;
 		}
-		if (CandyCounter == 35 && SRenderer.sprite == SaltWaterTaffyBox) {
+		if (CandyCounter == 40 && SRenderer.sprite == SaltWaterTaffyBox) {
 			Time.timeScale = 0;
 			print ("You Win!");
 		}
@@ -64,8 +64,39 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 		}
 	}
 	void OnCollisionEnter2D(Collision2D Col){
-		if (Col.gameObject.tag != "Player") {
+		if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag == "RedLicoriceWheels") && (SRenderer.sprite == RedLicoriceWheelBox)) {
 			CandyCounter += 1;
+			Destroy (Col.gameObject);
+		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "RedLicoriceWheels") && (SRenderer.sprite == RedLicoriceWheelBox)) {
+			CandyCounter = 0;
+			Destroy (Col.gameObject);
+		}
+		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "LicoricePastels") && (SRenderer.sprite== LicoricePastelsBox) ){
+			CandyCounter += 1;
+			Destroy (Col.gameObject);
+		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "LicoricePastels") && (SRenderer.sprite == RedLicoriceWheelBox)) {
+			CandyCounter = 0;
+			Destroy (Col.gameObject);
+		}
+		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "DarkChocolateRockyRoadBites") && (SRenderer.sprite == DarkChocolateRockyRoadBitsBox) ){
+			CandyCounter += 1;
+			Destroy (Col.gameObject);
+		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "DarkChocolateRockyRoadBites") && (SRenderer.sprite == RedLicoriceWheelBox)) {
+			CandyCounter = 0;
+			Destroy (Col.gameObject);
+		}
+		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "PeachyOs") && (SRenderer.sprite== PeachyOsBox) ){
+			CandyCounter += 1;
+			Destroy (Col.gameObject);
+		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "PeachyOs") && (SRenderer.sprite == RedLicoriceWheelBox)) {
+			CandyCounter = 0;
+			Destroy (Col.gameObject);
+		}
+		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "SaltWaterTaffy") && (SRenderer.sprite== SaltWaterTaffyBox) ){
+			CandyCounter += 1;
+			Destroy (Col.gameObject);
+		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "SaltWaterTaffy") && (SRenderer.sprite == RedLicoriceWheelBox)) {
+			CandyCounter = 0;
 			Destroy (Col.gameObject);
 		}
 		
