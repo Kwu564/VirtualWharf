@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 114542573606909540}
   - component: {fileID: 114334381605679960}
   - component: {fileID: 225032315824542148}
+  - component: {fileID: 114755479489025024}
   m_Layer: 5
   m_Name: PauseMenuManager
   m_TagString: Untagged
@@ -588,6 +589,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114755479489025024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1407797087081228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035c9ef6026183043bfafaf94cee02e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResumeButton: {fileID: 114473199576202714}
+  ReturnToTitleButton: {fileID: 114603146037107812}
+  QuitButton: {fileID: 114171195958700386}
 --- !u!114 &114824480986497320
 MonoBehaviour:
   m_ObjectHideFlags: 1
