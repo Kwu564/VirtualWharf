@@ -205,10 +205,7 @@ MonoBehaviour:
   lowerbound: 11
   upperbound: 100
   on: 0
-  HP: 17
   Health: {fileID: 937887722}
-  triggers: {fileID: 0}
-  hose: {fileID: 1881554949861426, guid: eb0c2505fad5743448287562bba21437, type: 2}
   id: 0
 --- !u!50 &245778161
 Rigidbody2D:
@@ -642,10 +639,7 @@ MonoBehaviour:
   lowerbound: 0
   upperbound: 0
   on: 1
-  HP: 17
   Health: {fileID: 1743830230}
-  triggers: {fileID: 0}
-  hose: {fileID: 0}
   id: 1
 --- !u!212 &637428148
 SpriteRenderer:
@@ -967,7 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581b3e3c96df0ef42aef16b63b27b87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dontDestroyOnLoad: 1
+  _dontDestroyOnLoad: 0
   _userData:
     configVars:
       updateLoop: 1

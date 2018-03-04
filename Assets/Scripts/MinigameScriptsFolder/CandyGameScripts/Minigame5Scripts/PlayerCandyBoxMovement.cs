@@ -80,28 +80,28 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "LicoricePastels") && (SRenderer.sprite== LicoricePastelsBox) ){
 			CandyCounter += 1;
 			Destroy (Col.gameObject);
-		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "LicoricePastels") && (SRenderer.sprite == RedLicoriceWheelBox)) {
+		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "LicoricePastels") && (SRenderer.sprite == LicoricePastelsBox)) {
 			CandyCounter = 0;
 			Destroy (Col.gameObject);
 		}
 		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "DarkChocolateRockyRoadBites") && (SRenderer.sprite == DarkChocolateRockyRoadBitsBox) ){
 			CandyCounter += 1;
 			Destroy (Col.gameObject);
-		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "DarkChocolateRockyRoadBites") && (SRenderer.sprite == RedLicoriceWheelBox)) {
+		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "DarkChocolateRockyRoadBites") && (SRenderer.sprite == DarkChocolateRockyRoadBitsBox)) {
 			CandyCounter = 0;
 			Destroy (Col.gameObject);
 		}
 		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "PeachyOs") && (SRenderer.sprite== PeachyOsBox) ){
 			CandyCounter += 1;
 			Destroy (Col.gameObject);
-		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "PeachyOs") && (SRenderer.sprite == RedLicoriceWheelBox)) {
+		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "PeachyOs") && (SRenderer.sprite == PeachyOsBox)) {
 			CandyCounter = 0;
 			Destroy (Col.gameObject);
 		}
 		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "SaltWaterTaffy") && (SRenderer.sprite== SaltWaterTaffyBox) ){
 			CandyCounter += 1;
 			Destroy (Col.gameObject);
-		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "SaltWaterTaffy") && (SRenderer.sprite == RedLicoriceWheelBox)) {
+		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "SaltWaterTaffy") && (SRenderer.sprite == SaltWaterTaffyBox)) {
 			CandyCounter = 0;
 			Destroy (Col.gameObject);
 		}

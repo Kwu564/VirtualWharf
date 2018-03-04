@@ -6,26 +6,38 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 001a6c098762ff84e8f2b0e2c45857fc
+  - enabled: 1
     path: Assets/Scenes/sceneOne.unity
     guid: db2aeee1060476b4698bf63d56a41911
   - enabled: 1
     path: Assets/Scenes/sceneTwo.unity
     guid: f5ebeda6f6f6dbf41982c7d02c68f8df
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 001a6c098762ff84e8f2b0e2c45857fc
-  - enabled: 1
     path: Assets/Scenes/InstructionsPage.unity
     guid: 64abe784f11f33d4db4b84d849276ddb
   - enabled: 1
     path: Assets/Scenes/CreditsPage.unity
     guid: ab58b174f02bc88488eb555711e79457
-  - enabled: 1
-    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/Minigame2.unity
-    guid: 8839e59eaf1097a4d88e1e52cdcf316c
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MinigameScenes/FishScalerScenes/Minigame1/Minigame1.unity
     guid: c4d5cd993a79e2e4783d2d6f32dbc5f2
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/CandyGameScenes/Minigame5/Minigame5.unity
+    guid: 0b4ea39393fe6404aabf07133179f40c
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/Minigame3Round1.unity
+    guid: b63bb9f6886fc684e8120708a536623e
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/Minigame2.unity
+    guid: 8839e59eaf1097a4d88e1e52cdcf316c
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame2Scenes/Minigame4/Fishing2.unity
+    guid: 2a179d66772f58d4797970731d36e9a8
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/Minigame3Round2.unity
+    guid: c93c0f82fd23da044920a7f9e1843ead

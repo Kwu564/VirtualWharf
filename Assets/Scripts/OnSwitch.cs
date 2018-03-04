@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Allows access to Button type
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class OnSwitch : MonoBehaviour {
     // The UI type that triggers our switch mechanism
     public Button button;
@@ -27,6 +27,7 @@ public class OnSwitch : MonoBehaviour {
     // Click triggers switch
     public void TaskOnClick()
     {
+        //StartCoroutine("EndOfTurn");
         if (GameObject.Find("Player1").GetComponent<MoveTo>().isMoving)
         {
             cam.GetComponent<CameraFollow>().target = Player2.transform;
@@ -38,7 +39,8 @@ public class OnSwitch : MonoBehaviour {
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = true;            
             GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = false;*/
             GlobalData.turn += 1;
-        } else
+        }
+        else
         {
             cam.GetComponent<CameraFollow>().target = Player1.transform;
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = true;
@@ -51,5 +53,16 @@ public class OnSwitch : MonoBehaviour {
             GlobalData.turn += 1;
         }
         Debug.Log("Switch players!");
+    }
+
+    /*private bool MainWorld()
+    {
+
+    }*/
+    IEnumerator EndOfTurn()
+    {
+        yield return new WaitForSeconds(2f);
+        
+       
     }
 }

@@ -8,6 +8,7 @@ public class ShowToothPick : MonoBehaviour {
 	//public BoxCollider2D LastStickCollider;
     public GameObject stop;
     public int player;
+	public int Ingredients;
 	float speed=20f;
 	//public float stop;
 	// Use this for initialization
@@ -21,7 +22,7 @@ public class ShowToothPick : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        if (Minigame3Data.Checked[player,0] >= 9)
+		if (Minigame3Data.Checked[player,Minigame3Data.round] == Ingredients)
                 CheckTouch ();
 
     }

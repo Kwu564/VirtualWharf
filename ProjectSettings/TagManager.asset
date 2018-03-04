@@ -11,6 +11,8 @@ TagManager:
   - PeachyOs
   - RedLicoriceWheels
   - DarkChocolateRockyRoadBits
+  - Fail
+  - Correct
   layers:
   - Default
   - TransparentFX

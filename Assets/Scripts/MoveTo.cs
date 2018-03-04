@@ -33,7 +33,7 @@ public class MoveTo : MonoBehaviour {
 
     public bool isMoving;
     public bool moved = false;
-    private bool clicked = false;
+    public bool clicked = false;
     // Hides the variable below from the Inspector
     [HideInInspector]
     // The cursor's screen position
@@ -146,7 +146,7 @@ public class MoveTo : MonoBehaviour {
             //int steps = (int)Random.Range(1, 6);
             Dice.SetActive(true); 
             agent.isStopped = false;
-            int step = (int)Random.Range(1.9f,5.9f);
+            int step = (int)Random.Range(1.9f,4.9f);
             end = current + step;
             Dice.transform.GetChild(0).gameObject.GetComponent<Text>().text = step.ToString();
             StartCoroutine("Roll");

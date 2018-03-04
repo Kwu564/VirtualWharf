@@ -121,7 +121,7 @@ public class RandomPole : MonoBehaviour {
     IEnumerator showWinner()
     {
 
-        float wait = Random.Range(2,5);
+        float wait = Random.Range(1,3);
         yield return new WaitForSeconds(wait);
 		//if (set) {
 //			Pole1Anim ["Pole1Animation"].speed = 0.6666667f;

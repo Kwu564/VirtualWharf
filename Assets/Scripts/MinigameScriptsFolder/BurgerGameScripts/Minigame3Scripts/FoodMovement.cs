@@ -54,10 +54,10 @@ public class FoodMovement : MonoBehaviour {
             HasCollided = true;
 		}
         Minigame3Data.Checked[player, Minigame3Data.round] += 1;
-        print("player:"+player+" " + Minigame3Data.Checked[player,0]);
+        print("player:"+player+" " + Minigame3Data.Checked[player,Minigame3Data.round]);
     }
 	void StopMovement(){
-		if (Input.GetKeyDown ("space")) {
+		if (Input.GetKeyDown ("space")&&!check) {
 			CheckForCollisions ();
             check = true;
         }

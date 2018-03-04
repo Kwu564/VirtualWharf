@@ -11,18 +11,19 @@ public class Scaler : MonoBehaviour {
     public float lowerbound;
     public float upperbound;
     public bool on;
-    public int HP = 17;
+    //public int HP = 17;
     public Slider Health;
 
-    public GameObject p1, p2;
+    /*public GameObject p1, p2;
     public GameObject cam;
-    public GameObject triggers;
+    public GameObject triggers;*/
 
     [SerializeField] private int id;
     // Use this for initialization
     void Start () {
         scaler = gameObject.GetComponent<CapsuleCollider2D>();
-        Health.value = Health.maxValue - HP;
+        print("total: "+ Minigame1Data.HP[id]);
+        Health.value = Health.maxValue - Minigame1Data.HP[id];
 	}
 	
 	// Update is called once per frame
@@ -42,16 +43,15 @@ public class Scaler : MonoBehaviour {
         if (ReInput.players.GetPlayer(id).GetAxis("Scale") >= 0)
         {
             this.on = false;
-            print(on);
         }else
         {
             this.on = true;
         }
-        if (HP <= 0)
+        if (Minigame1Data.HP[id] <= 0)
         {
             Destroy(gameObject);
         }
-        Health.value = Health.maxValue - HP;
+        Health.value = Health.maxValue - Minigame1Data.HP[id];
     }
     public void rumble()
     {
