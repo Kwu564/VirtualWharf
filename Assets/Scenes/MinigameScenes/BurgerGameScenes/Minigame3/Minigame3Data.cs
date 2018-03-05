@@ -9,7 +9,7 @@ public class Minigame3Data {
     static public int round = 0;
     //static public int round = 0;
     static public bool[,] perfect = new bool[2,4];
-    public void clear()
+    public static void clear()
     {
         for(int x = 0; x < 2; x++)
         {
@@ -20,6 +20,6 @@ public class Minigame3Data {
                 perfect[x, y] = false;
             }
         }
-        //round = 0;
+        round = 0;
     }
 }

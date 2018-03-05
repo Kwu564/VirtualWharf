@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.UI;
 using Rewired;
+using UnityEngine.SceneManagement;
 public class RandomPole : MonoBehaviour {
     public GameObject[] Poles;
 	public GameObject Pole1AnimObj;
@@ -37,8 +38,8 @@ public class RandomPole : MonoBehaviour {
 		Pole3Anim = Pole3AnimObj.GetComponent<Animation> ();
 		Pole4Anim = Pole4AnimObj.GetComponent<Animation> ();
 
-        PlayerOne = ReInput.players.GetPlayer(1);
-        PlayerTwo = ReInput.players.GetPlayer(0);
+        PlayerOne = ReInput.players.GetPlayer(0);
+        PlayerTwo = ReInput.players.GetPlayer(1);
         set = false;
         WinningRod = (int)Random.Range(0f,3f);
         StartCoroutine("showWinner");
@@ -194,6 +195,7 @@ public class RandomPole : MonoBehaviour {
             else if (PlayerOne.GetButton("FourthPole") && P2Rod != 3){
                 P1Rod = 3;
                 print(P1Rod);
+                //SceneManager.LoadScene("sceneOne");
                 //SelectedPole[0] = true;
             }
         }
@@ -232,5 +234,11 @@ public class RandomPole : MonoBehaviour {
             
 
         }
+    }
+
+    public void OnDisable()
+    {
+        StopAllCoroutines();
+        SceneManager.LoadSceneAsync("sceneOne");
     }
 }

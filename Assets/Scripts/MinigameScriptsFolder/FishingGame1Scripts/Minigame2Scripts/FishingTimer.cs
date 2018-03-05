@@ -32,9 +32,8 @@ public class FishingTimer : MonoBehaviour {
         game.enabled = false;
         Time.timeScale = 0f;
         //yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene("sceneOne");
-        yield break;
-       // WinnerText.SetActive(true);
-        
+        //SceneManager.LoadScene("sceneOne");
+        // WinnerText.SetActive(true);
+
     }
 }

@@ -21,10 +21,12 @@ public class TriggerMiniGame : MonoBehaviour {
         if (!trigger)
         {
             other.gameObject.GetComponent<MoveTo>().triggered = true;
+            //other.gameObject.GetComponent<MoveTo>().agent.isStopped = true;
             /*p1.SetActive(false);
             p2.SetActive(false);
             cam.SetActive(false);
             triggers.SetActive(false);*/
+            GlobalData.Wharf = false;
             LoadScreen.SetActive(true);
             StartCoroutine("LoadNewScene");
             //SceneManager.LoadScene(LevelName);
@@ -48,6 +50,8 @@ public class TriggerMiniGame : MonoBehaviour {
     IEnumerator LoadNewScene()
     {
 
+        //p1.GetComponent<MoveTo>().agent.isStopped = true;
+        //p2.GetComponent<MoveTo>().agent.isStopped = true;
         // This line waits for 3 seconds before executing the next line in the coroutine.
         // This line is only necessary for this demo. The scenes are so simple that they load too fast to read the "Loading..." text.
         yield return new WaitForSeconds(3);

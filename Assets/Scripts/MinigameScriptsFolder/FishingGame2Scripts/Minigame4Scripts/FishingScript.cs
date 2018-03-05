@@ -14,7 +14,10 @@ public class FishingScript : MonoBehaviour {
     private Rigidbody rgbd;
     public float speed,zMod;
     public GameObject cam;
-    public int BaitTime = 5; 
+    public Vector3 lastPosition;
+    public int BaitTime = 5;
+    public float minScreenBoundsx, maxScreenBoundsy, minScreenBoundsy, maxScreenBoundsx;
+    public GameObject fish;
     // Use this for initialization
     void Start () {
         Random.seed = System.Environment.TickCount;
@@ -27,6 +30,7 @@ public class FishingScript : MonoBehaviour {
 		FishIsOnLine = false;
 		FishIsCaught = false;
 		StillFishing = false;
+        lastPosition = aim.transform.position;
 
 	}
 	IEnumerator WaitForFishToBeCaughtOnLine(){
@@ -82,12 +86,23 @@ public class FishingScript : MonoBehaviour {
         {
             float x = player.GetAxis("AimX");
             float z = player.GetAxis("AimY") * zMod;
-            Vector3 move = new Vector3(x, 0, z);
+            Vector3 move = new Vector3(x,0,z);
             rgbd.velocity = move * speed * Time.deltaTime;
-            if (move == Vector3.zero)
+            if (move == Vector3.zero )
             {
                 rgbd.velocity = Vector3.zero;
             }
+            
+            Vector3 pos = cam.GetComponent<Camera>().WorldToViewportPoint(aim.transform.position);
+            lastPosition = pos;
+            pos.x = Mathf.Clamp01(pos.x);
+            //pos.y = Mathf.Clamp01(pos.y);
+            //pos.y = 0.529551f;
+            pos.z = Mathf.Clamp(pos.z, 8f, 50f);
+            aim.transform.position = cam.GetComponent<Camera>().ViewportToWorldPoint(pos);
+            //Vector3 minScreenBounds = cam.GetComponent<Camera>().ViewportToWorldPoint(new Vector3(0, 0, 0));
+            //Vector3 maxScreenBounds = cam.GetComponent<Camera>().ViewportToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+            //aim.transform.position = new Vector3(Mathf.Clamp(aim.transform.position.x, minScreenBoundsx, maxScreenBoundsx),aim.transform.position.y,aim.transform.position.z);
         }
         if (player.GetButtonDown("Cast"))
         {
@@ -100,15 +115,16 @@ public class FishingScript : MonoBehaviour {
             {
                 cam.GetComponent<FishingCam>().SetZoom();
                 FishIsCaught = true;
+                fish.SetActive(true);
                 this.enabled = false;
             }
             else if(!FishIsOnLine)
             {
                 casted = false;
             }
-            
+           
         }
-
+       
         //CheckIfMousePressed ();
 	}
 }

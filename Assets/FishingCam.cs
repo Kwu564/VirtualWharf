@@ -21,10 +21,10 @@ public class FishingCam : MonoBehaviour {
             // Smoothly interpolate between the camera's current position and it's target position.
             transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
             transform.LookAt(target);
-            if(transform.position == targetCamPos)
+            /*if(transform.position == targetCamPos)
             {
                 zoom = false;
-            }
+            }*/
         }
     }
     public void SetZoom()

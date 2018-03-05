@@ -8,6 +8,7 @@ public class LoadWorld : MonoBehaviour
     public GameObject p1, p2;
     public GameObject cam;
     public GameObject triggers;
+    public bool start;
     private void Awake()
     {
         SceneManager.sceneLoaded += OnLevelLoad;
@@ -21,13 +22,16 @@ public class LoadWorld : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        start = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        /*if(start == true)
+        {
+            MinigameEnd();
+        }*/
     }
 
     void OnLevelLoad(Scene scene, LoadSceneMode mode)
@@ -35,13 +39,17 @@ public class LoadWorld : MonoBehaviour
         print("Load");
         if (scene.name == "sceneOne")
         {
+            GlobalData.Wharf = true;
+            Minigame3Data.clear();
             p1.SetActive(true);
             p2.SetActive(true);
+            //StartCoroutine("MinigameEnd");
             if (p1.GetComponent<MoveTo>().moved == false)
             {
-            p1.GetComponent<MoveTo>().Continue();
-            //p1.GetComponent<MoveTo>().moved = true;
-            //p2.GetComponent<MoveTo>().moved = false;
+                //p1.GetComponent<MoveTo>().moved = true;
+                //p2.GetComponent<MoveTo>().moved = false;
+                p1.GetComponent<MoveTo>().Continue();
+           
             }
             else
             {
@@ -56,6 +64,7 @@ public class LoadWorld : MonoBehaviour
         }
         else
         {
+            
             //GameObject.Find()
             foreach (Transform child in transform)
             {

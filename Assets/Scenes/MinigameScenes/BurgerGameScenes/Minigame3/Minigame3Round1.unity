@@ -113,6 +113,106 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &85510872
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224071570449331984, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 398f72da6eb96654b9ea869d3e2d8a1c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &92601636
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +378,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 14.64
+  m_Radius: 20
 --- !u!114 &97269218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +445,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.55, y: 0.08}
   serializedVersion: 2
-  m_Radius: 9.95
+  m_Radius: 20
 --- !u!50 &129492246
 Rigidbody2D:
   serializedVersion: 4
@@ -516,9 +616,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 0.9}
+  m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 9.3
+  m_Radius: 20
 --- !u!50 &270055352
 Rigidbody2D:
   serializedVersion: 4
@@ -587,9 +687,14 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.63, y: 31}
+  m_AnchoredPosition: {x: 12.1, y: 18.1}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &286516315 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1407797087081228, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
+    type: 2}
+  m_PrefabInternal: {fileID: 85510872}
 --- !u!1 &288383146
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.8, y: -89.7}
+  m_AnchoredPosition: {x: 12.1, y: -89.7}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &288383148
@@ -659,9 +764,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8, y: -0.5}
+  m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 11
+  m_Radius: 20
 --- !u!114 &288383150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,7 +1019,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 4.52, y: 0}
   serializedVersion: 2
-  m_Radius: 7.9
+  m_Radius: 20
 --- !u!114 &392935728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,7 +1176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.6, y: -62.4}
+  m_AnchoredPosition: {x: 12.1, y: -62.4}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &438538949
@@ -1106,9 +1211,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8, y: 0.6}
+  m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 6.9
+  m_Radius: 20
 --- !u!114 &438538951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,7 +1504,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 1.7, y: -0.3}
   serializedVersion: 2
-  m_Radius: 5.64
+  m_Radius: 20
 --- !u!50 &527667911
 Rigidbody2D:
   serializedVersion: 4
@@ -1576,7 +1681,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 2, y: 0}
   serializedVersion: 2
-  m_Radius: 8.6
+  m_Radius: 20
 --- !u!1 &587454764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,7 +1809,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.8, y: -0.5}
   serializedVersion: 2
-  m_Radius: 11
+  m_Radius: 20
 --- !u!50 &616957353
 Rigidbody2D:
   serializedVersion: 4
@@ -1913,7 +2018,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 1.47, y: 2.39}
   serializedVersion: 2
-  m_Radius: 5.6
+  m_Radius: 20
 --- !u!114 &723247446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2323,7 +2428,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -1.25, y: 0}
   serializedVersion: 2
-  m_Radius: 11.27
+  m_Radius: 20
 --- !u!114 &886943807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2585,7 +2690,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.8, y: -0.8}
   serializedVersion: 2
-  m_Radius: 8.7
+  m_Radius: 20
 --- !u!50 &1056635208
 Rigidbody2D:
   serializedVersion: 4
@@ -2708,7 +2813,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 6.41, y: 0}
   serializedVersion: 2
-  m_Radius: 5.56
+  m_Radius: 20
 --- !u!114 &1077468816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3009,7 +3114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.6, y: 8.1}
+  m_AnchoredPosition: {x: 12.1, y: 8.1}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1219841342
@@ -3044,9 +3149,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.55, y: 0.08}
+  m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 9.95
+  m_Radius: 20
 --- !u!114 &1219841344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3185,7 +3290,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 4.2, y: 0}
   serializedVersion: 2
-  m_Radius: 5.4
+  m_Radius: 20
 --- !u!1 &1255558083
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3302,7 @@ GameObject:
   - component: {fileID: 1255558086}
   - component: {fileID: 1255558085}
   - component: {fileID: 1255558084}
+  - component: {fileID: 1255558089}
   - component: {fileID: 1255558088}
   m_Layer: 0
   m_Name: Main Camera
@@ -3280,6 +3386,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac28d0c6a8e31e84ea07ddf6672dee3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1255558089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255558083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9aa6c3ca09928438e8ee536d1ae9be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InGameMenuPopUp: {fileID: 286516315}
+  pauseMenuShows: 0
 --- !u!1 &1268951955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3622,6 +3741,7 @@ GameObject:
   - component: {fileID: 1317432233}
   - component: {fileID: 1317432232}
   - component: {fileID: 1317432231}
+  - component: {fileID: 1317432235}
   m_Layer: 5
   m_Name: Stick (4)
   m_TagString: StickColliderTag
@@ -3644,7 +3764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.5, y: -8.8}
+  m_AnchoredPosition: {x: 12.1, y: -8.8}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1317432231
@@ -3679,9 +3799,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.7, y: -0.3}
+  m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 5.64
+  m_Radius: 20
 --- !u!114 &1317432233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3715,6 +3835,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1317432229}
+--- !u!58 &1317432235
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1317432229}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 8.46, y: 23}
+  serializedVersion: 2
+  m_Radius: 20
 --- !u!1 &1348862210
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,7 +3883,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 14.64
+  m_Radius: 20
 --- !u!50 &1348862212
 Rigidbody2D:
   serializedVersion: 4
@@ -3853,7 +3988,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.5, y: 0.4}
   serializedVersion: 2
-  m_Radius: 5.88
+  m_Radius: 20
 --- !u!50 &1393981709
 Rigidbody2D:
   serializedVersion: 4
@@ -4169,7 +4304,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.8, y: 0.6}
   serializedVersion: 2
-  m_Radius: 6.9
+  m_Radius: 20
 --- !u!50 &1509806571
 Rigidbody2D:
   serializedVersion: 4
@@ -4402,7 +4537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.4, y: -22.9}
+  m_AnchoredPosition: {x: 12.1, y: -22.9}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1645371084
@@ -4437,9 +4572,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.5, y: -0.7}
+  m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 5.01
+  m_Radius: 20
 --- !u!114 &1645371086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4524,7 +4659,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.62, y: 0}
   serializedVersion: 2
-  m_Radius: 8.27
+  m_Radius: 20
 --- !u!114 &1661363569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4917,7 +5052,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.3, y: -46}
+  m_AnchoredPosition: {x: 12.1, y: -46}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1752868176
@@ -4952,9 +5087,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 0.4}
+  m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 5.88
+  m_Radius: 20
 --- !u!114 &1752868178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5039,7 +5174,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 5.4, y: -2.56}
   serializedVersion: 2
-  m_Radius: 9.33
+  m_Radius: 20
 --- !u!114 &1772785744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5276,7 +5411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.63, y: 31}
+  m_AnchoredPosition: {x: 12.1, y: 31}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1968751027
@@ -5311,9 +5446,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 0.9}
+  m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 9.3
+  m_Radius: 20
 --- !u!114 &1968751029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5380,7 +5515,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 2.5, y: -0.7}
   serializedVersion: 2
-  m_Radius: 5.01
+  m_Radius: 20
 --- !u!50 &1972730145
 Rigidbody2D:
   serializedVersion: 4
@@ -5571,7 +5706,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -1.25, y: 0}
   serializedVersion: 2
-  m_Radius: 4.57
+  m_Radius: 20
 --- !u!114 &2117454857
 MonoBehaviour:
   m_ObjectHideFlags: 0

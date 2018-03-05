@@ -10,7 +10,12 @@ public static class GlobalData{
     static public bool[] moved = { false, false };
     static public bool created = false;
     static public int turn = 1;
+    static public bool Wharf = true;
     static public List<GameObject> P1Inventory = new List<GameObject> ();
     static public List<GameObject> P2Inventory = new List<GameObject>();
     static public List<List<GameObject>> Inventory = new List<List<GameObject>> {P1Inventory,P2Inventory};
+    public static bool getWharf()
+    {
+        return Wharf;
+    }
 }

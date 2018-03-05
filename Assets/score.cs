@@ -15,16 +15,18 @@ public class score : MonoBehaviour {
 	public int Ingredients;
 	// Use this for initialization
 	void Start () {
+        print(Minigame3Data.Scores[player, Minigame3Data.round]);
         //Fails = GameObject.FindGameObjectsWithTag("Fail").OrderBy(f => f.name).ToList();
         //Successes = GameObject.FindGameObjectsWithTag("Correct").OrderBy(f => f.name).ToList();
-        for(int i = 0; i < Fails.Count;i++)
+        for (int i = 0; i < Fails.Count;i++)
         {
             Successes[i].SetActive(false);
             Fails[i].SetActive(false);
         }
         for(int i = 0; i < Minigame3Data.round; i++)
         {
-           
+
+            print(Minigame3Data.perfect[player, i]);
             if (Minigame3Data.perfect[player, i])
             {
                 Successes[i].SetActive(true);
@@ -37,6 +39,7 @@ public class score : MonoBehaviour {
     }
 	IEnumerator Change(){
 		yield return new WaitForSeconds (1);
+        Minigame3Data.round = NextRound;
         SceneManager.LoadScene(GoTo);
 		//Next.SetActive (true);
 		//Current.SetActive (false);
@@ -48,6 +51,7 @@ public class score : MonoBehaviour {
         if (Minigame3Data.Scores[player,Minigame3Data.round] == (100 * Ingredients) && Minigame3Data.Checked[player,Minigame3Data.round] == Ingredients)
         {
             Successes[Minigame3Data.round].SetActive(true);
+            Minigame3Data.perfect[player, Minigame3Data.round] = true;
             //print("Win");
             gameObject.GetComponent<Text>().text = "You win!";
         }

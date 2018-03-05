@@ -27,13 +27,22 @@ public class OnSwitch : MonoBehaviour {
     // Click triggers switch
     public void TaskOnClick()
     {
-        //StartCoroutine("EndOfTurn");
+        StartCoroutine("EndOfTurn");
+        
+    }
+
+    IEnumerator EndOfTurn()
+    {
+        print("working on it");
+        yield return new WaitUntil(GlobalData.getWharf);
+        yield return new WaitForSeconds(2f);
         if (GameObject.Find("Player1").GetComponent<MoveTo>().isMoving)
         {
             cam.GetComponent<CameraFollow>().target = Player2.transform;
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = false;
             GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = true;
             GameObject.Find("Player2").GetComponent<MoveTo>().moved = false;
+            GameObject.Find("Player2").GetComponent<MoveTo>().clicked = false;
             Debug.Log("Switch to 2");
             /*GameObject.Find("Player2").GetComponent<MoveTo>().agent.isStopped = true;
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = true;            
@@ -46,6 +55,7 @@ public class OnSwitch : MonoBehaviour {
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = true;
             GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = false;
             GameObject.Find("Player1").GetComponent<MoveTo>().moved = false;
+            GameObject.Find("Player1").GetComponent<MoveTo>().clicked = false;
             Debug.Log("Switch to 1");
             /*GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = true;
             GameObject.Find("Player1").GetComponent<MoveTo>().agent.isStopped = true;
@@ -53,16 +63,6 @@ public class OnSwitch : MonoBehaviour {
             GlobalData.turn += 1;
         }
         Debug.Log("Switch players!");
-    }
 
-    /*private bool MainWorld()
-    {
-
-    }*/
-    IEnumerator EndOfTurn()
-    {
-        yield return new WaitForSeconds(2f);
-        
-       
     }
 }

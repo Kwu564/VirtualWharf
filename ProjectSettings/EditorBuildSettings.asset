@@ -41,3 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/Minigame3Round2.unity
     guid: c93c0f82fd23da044920a7f9e1843ead
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/Minigame3Round3.unity
+    guid: 0146d873a9b5b9040a83033e052c3739
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/Minigame3Round4.unity
+    guid: 0077e602dc009f34f88e1831af2b0b65

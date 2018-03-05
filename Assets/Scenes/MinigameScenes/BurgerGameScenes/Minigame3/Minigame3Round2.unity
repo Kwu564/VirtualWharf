@@ -146,7 +146,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.5, y: 0.9}
   serializedVersion: 2
-  m_Radius: 9.3
+  m_Radius: 20
 --- !u!50 &31150196
 Rigidbody2D:
   serializedVersion: 4
@@ -215,7 +215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.3, y: 12.8}
+  m_AnchoredPosition: {x: 13.29, y: 14.51}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &66345149
@@ -652,9 +652,17 @@ MonoBehaviour:
   player: 0
   NextRound: 2
   GoTo: Minigame3Round3
-  Fails: []
-  Successes: []
-  Ingredients: 9
+  Fails:
+  - {fileID: 675287236}
+  - {fileID: 145824715}
+  - {fileID: 1427505279}
+  - {fileID: 2051226248}
+  Successes:
+  - {fileID: 674183497}
+  - {fileID: 1298128229}
+  - {fileID: 1808131887}
+  - {fileID: 748766137}
+  Ingredients: 10
 --- !u!114 &194634392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,7 +1182,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 8.5
+  m_Radius: 20
 --- !u!50 &332805625
 Rigidbody2D:
   serializedVersion: 4
@@ -1243,7 +1251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.1, y: 12.7}
+  m_AnchoredPosition: {x: -0.02998, y: 14.51}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &362318286
@@ -1385,7 +1393,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 8.46, y: 23}
   serializedVersion: 2
-  m_Radius: 8.5
+  m_Radius: 20
 --- !u!50 &370487163
 Rigidbody2D:
   serializedVersion: 4
@@ -1454,7 +1462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.5, y: 77.5}
+  m_AnchoredPosition: {x: 3.55, y: 77.2}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &372815750
@@ -1769,9 +1777,17 @@ MonoBehaviour:
   player: 1
   NextRound: 2
   GoTo: Minegame3Round3
-  Fails: []
-  Successes: []
-  Ingredients: 9
+  Fails:
+  - {fileID: 949489661}
+  - {fileID: 973561486}
+  - {fileID: 845964860}
+  - {fileID: 2047757730}
+  Successes:
+  - {fileID: 1721531149}
+  - {fileID: 496146599}
+  - {fileID: 1516157277}
+  - {fileID: 1445864346}
+  Ingredients: 10
 --- !u!114 &426893676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2335,7 +2351,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 1.7, y: -0.3}
   serializedVersion: 2
-  m_Radius: 5.64
+  m_Radius: 20
 --- !u!50 &575550691
 Rigidbody2D:
   serializedVersion: 4
@@ -2586,14 +2602,14 @@ RectTransform:
   m_GameObject: {fileID: 675287236}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0001125, y: 1.0001125, z: 1.0001125}
+  m_LocalScale: {x: 1.0001123, y: 1.0001123, z: 1.0001123}
   m_Children: []
   m_Father: {fileID: 818472085}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -252.78009, y: 283.2}
+  m_AnchoredPosition: {x: -252.7801, y: 283.2}
   m_SizeDelta: {x: 85.54, y: 31.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675287238
@@ -2662,7 +2678,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 2.5, y: -0.7}
   serializedVersion: 2
-  m_Radius: 5.01
+  m_Radius: 20
 --- !u!50 &705010234
 Rigidbody2D:
   serializedVersion: 4
@@ -3041,7 +3057,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.8, y: 0.6}
   serializedVersion: 2
-  m_Radius: 6.9
+  m_Radius: 20
 --- !u!50 &820369777
 Rigidbody2D:
   serializedVersion: 4
@@ -3388,7 +3404,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.55, y: 0.08}
   serializedVersion: 2
-  m_Radius: 5.97
+  m_Radius: 20
 --- !u!50 &950965480
 Rigidbody2D:
   serializedVersion: 4
@@ -3493,7 +3509,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.5, y: 0.4}
   serializedVersion: 2
-  m_Radius: 5.88
+  m_Radius: 20
 --- !u!50 &973253094
 Rigidbody2D:
   serializedVersion: 4
@@ -5548,7 +5564,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.8, y: -0.5}
   serializedVersion: 2
-  m_Radius: 11
+  m_Radius: 20
 --- !u!50 &1583582491
 Rigidbody2D:
   serializedVersion: 4
@@ -5759,7 +5775,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.8, y: -0.8}
   serializedVersion: 2
-  m_Radius: 8.7
+  m_Radius: 20
 --- !u!50 &1636099861
 Rigidbody2D:
   serializedVersion: 4

@@ -164,26 +164,32 @@ public class MoveTo : MonoBehaviour {
         }
         else
         {
-           
+
+            
             Move(Vector3.zero, false, false);
             if (current < end && moved)
             {
-                current++;
+                current++;             
                 agent.destination = map.NextTile(current).transform.position;
-                agent.isStopped = false;
-            } else if (moved)
+                print("still running");
+                //agent.isStopped = false;
+            } else if (moved && current == end)
             {
                 //Do all the end of turn stuff in here
                 //print(current);
                 //print(end);
+                //map.NextTile(end).SendMessage("OnTriggerEnter", gameObject.GetComponent<Collider>());
                 //map.NextTile(end).SendMessage("OnTriggerEnter",gameObject.GetComponent<Collider>());
                 agent.isStopped = true;
                 
-                clicked = false;
+
+                //StartCoroutine("SwitchPlayers");
+                //clicked = false;
                 print("Arrived");
                 moved = false;
                 Change.TaskOnClick();
                 
+
                 // agent.isStopped = true;
             }
 
@@ -223,7 +229,15 @@ public class MoveTo : MonoBehaviour {
 
     public void Continue()
     {
-        agent.destination = map.NextTile(current).transform.position;
+        try
+        {
+            agent.destination = map.NextTile(current).transform.position;
+            agent.isStopped = false;
+        }
+        catch
+        {
+
+        }
     }
     IEnumerator Roll()
     {
@@ -234,5 +248,10 @@ public class MoveTo : MonoBehaviour {
         
         Dice.SetActive(false);
         moved = true;
+    }
+    IEnumerator SwitchPlayers()
+    {
+        yield return new WaitForSeconds(1.0f);
+        
     }
 }
