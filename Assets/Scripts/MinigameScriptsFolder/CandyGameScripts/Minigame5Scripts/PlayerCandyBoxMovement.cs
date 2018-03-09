@@ -6,8 +6,13 @@ using UnityEngine;
 using Rewired;
 public class PlayerCandyBoxMovement : MonoBehaviour {
 	public float Speed;
+	public GameObject RedLicoriceWheelUI;
+	public GameObject LicoricePastelUI;
+	public GameObject DarkChocolateRockyRoadBitsUI;
+	public GameObject PeachyOsUI;
+	public GameObject SaltWaterTaffyUI;
 	private Rigidbody2D CandyBox;
-	private SpriteRenderer SRenderer;
+	private Image SRenderer;
 	public Image CandyBoxMeter;
     public int id;
     public Text winner;
@@ -18,6 +23,7 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 	public Sprite DarkChocolateRockyRoadBitsBox;
 	public Sprite PeachyOsBox;
 	public Sprite SaltWaterTaffyBox;
+    public GameObject trophy;
 	public PauseMenu pause;    
 	// Use this for initialization
 	void Start () {
@@ -25,12 +31,18 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
         CandyBox =gameObject.GetComponent<Rigidbody2D> ();
 		CandyCounter = 0;
 		CandyBoxMeter.fillAmount = 0f;
-		SRenderer = GetComponent<SpriteRenderer> ();
+		SRenderer = GetComponent<Image> ();
 		SRenderer.sprite = RedLicoriceWheelBox;
+		RedLicoriceWheelUI.gameObject.SetActive (true);
+		LicoricePastelUI.gameObject.SetActive (false);
+		DarkChocolateRockyRoadBitsUI.gameObject.SetActive (false);
+		PeachyOsUI.gameObject.SetActive (false);
+		SaltWaterTaffyUI.gameObject.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		CurrentUICandy ();
 		MoveBackAndForth ();
 		if (CandyCounter == 3 && SRenderer.sprite==RedLicoriceWheelBox) {
 			SRenderer.sprite = LicoricePastelsBox;
@@ -61,7 +73,12 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
             }
             //print(Time.timeScale);
 			winner.text = "Player "+(id+1)+" Win!";
-
+            if (!GlobalData.Inventory[id].Contains(trophy))
+            {
+                GlobalData.Inventory[id].Add(trophy);
+            }
+            GlobalData.MinigameWinner = id;
+            SceneManager.LoadScene("sceneOne");
 		}
 		
 	}
@@ -150,4 +167,19 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
         StopAllCoroutines();
         
     }
+	void CurrentUICandy(){
+		if (SRenderer.sprite == LicoricePastelsBox) {
+			RedLicoriceWheelUI.gameObject.SetActive (false);
+			LicoricePastelUI.gameObject.SetActive (true);
+		} else if (SRenderer.sprite == DarkChocolateRockyRoadBitsBox) {
+			LicoricePastelUI.gameObject.SetActive (false);
+			DarkChocolateRockyRoadBitsUI.gameObject.SetActive (true);
+		} else if (SRenderer.sprite == PeachyOsBox) {
+			DarkChocolateRockyRoadBitsUI.gameObject.SetActive (false);
+			PeachyOsUI.gameObject.SetActive (true);
+		} else if (SRenderer.sprite == SaltWaterTaffyBox) {
+			PeachyOsUI.gameObject.SetActive (false);
+			SaltWaterTaffyUI.gameObject.SetActive (true);
+		}
+	}
 }

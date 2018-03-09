@@ -298,6 +298,74 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1110942249}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &402030539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 402030540}
+  - component: {fileID: 402030542}
+  - component: {fileID: 402030541}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &402030540
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402030539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1738399227}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -133, y: 33}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &402030541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402030539}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: bb1e04b00540e274f8549aff48183e89, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &402030542
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402030539}
 --- !u!1 &405964981 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1330503387790172, guid: 7929365d0df124247a0b4c8115d16554,
@@ -505,7 +573,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1926761731445048, guid: 9fb8fa14c57fd464aa16ab98c60c0f5f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9fb8fa14c57fd464aa16ab98c60c0f5f, type: 2}
@@ -626,6 +694,7 @@ MonoBehaviour:
   Pole2AnimObj: {fileID: 856410721}
   Pole3AnimObj: {fileID: 2036605907}
   Pole4AnimObj: {fileID: 1738648898}
+  Trophy: {fileID: 1708455608624946, guid: 470466d182558014b80c560f91c5f046, type: 2}
   SelectedPole: 0000
   RandomizedValue: 0
   WinningRod: 0
@@ -1407,7 +1476,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1407797087081228, guid: 398f72da6eb96654b9ea869d3e2d8a1c, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 398f72da6eb96654b9ea869d3e2d8a1c, type: 2}
@@ -1708,7 +1777,7 @@ MonoBehaviour:
       - _actionCategoryId: 0
         _actionId: 0
         _elementType: 1
-        _elementIdentifierId: 6
+        _elementIdentifierId: 8
         _axisRange: 0
         _invert: 0
         _axisContribution: 0
@@ -1719,7 +1788,7 @@ MonoBehaviour:
       - _actionCategoryId: 0
         _actionId: 1
         _elementType: 1
-        _elementIdentifierId: 7
+        _elementIdentifierId: 6
         _axisRange: 0
         _invert: 0
         _axisContribution: 0
@@ -1730,7 +1799,7 @@ MonoBehaviour:
       - _actionCategoryId: 0
         _actionId: 2
         _elementType: 1
-        _elementIdentifierId: 8
+        _elementIdentifierId: 7
         _axisRange: 0
         _invert: 0
         _axisContribution: 0

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
+using UnityEngine.UI;
 using UnityEngine;
 
 
@@ -12,12 +12,13 @@ public class ShowBurgerInfo : MonoBehaviour {
 	public ShowBurgerInfo show;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		Canvas BurgerMenuPopUp = BurgerInfo.GetComponentInParent<Canvas>();
 		BurgerInfoIsShowing = false;
 		pause.enabled = false;
 		show.enabled = false;
-		//count.enabled = false;
+        //count.enabled = false;
+        //Time.timeScale = 0;
 		StartCoroutine ("AfterCountdown");
 	}
 	IEnumerator AfterCountdown(){
@@ -36,7 +37,8 @@ public class ShowBurgerInfo : MonoBehaviour {
 		BurgerInfoIsShowing = true;
 		yield return new WaitForSecondsRealtime (1f);
 		BurgerInfoIsShowing = false;
-		pause.enabled = true;
+        //Time.timeScale = 1;
+        pause.enabled = true;
 		//count.enabled = true;
 
 

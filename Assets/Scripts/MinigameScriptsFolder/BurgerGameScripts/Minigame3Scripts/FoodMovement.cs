@@ -2,9 +2,10 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Rewired;
 public class FoodMovement : MonoBehaviour {
     public int player;
+    public Player controls;
 	float XSpeed;
 	public float ValueOfXSpeed;
 	public float StartingPosition;
@@ -21,6 +22,7 @@ public class FoodMovement : MonoBehaviour {
     public Canvas cafe;
 	// Use this for initialization
 	void Start () {
+        controls = ReInput.players.GetPlayer(player);
         cafe = transform.parent.gameObject.GetComponent<Canvas>();
 		HasCollided = false;
 		//StickCollider = GameObject.FindGameObjectWithTag ("StickColliderTag").GetComponent<CircleCollider2D> ();
@@ -38,11 +40,11 @@ public class FoodMovement : MonoBehaviour {
         //Application.targetFrameRate = 60;
         transform.localPosition = new Vector3 (StartX, StartY, StartZ);
 		if (!Flip) {
-			StartingPosition = this.transform.localPosition.x;
+			StartingPosition = this.transform.localPosition.x - cam.pixelWidth;
 			EndingPosition = this.transform.localPosition.x + cam.pixelWidth;
 		} else {
 			EndingPosition = this.transform.localPosition.x - cam.pixelWidth;
-			StartingPosition = this.transform.localPosition.x;
+			StartingPosition = this.transform.localPosition.x + cam.pixelWidth;
 			StartX = StartingPosition;
 		}
 
@@ -57,7 +59,7 @@ public class FoodMovement : MonoBehaviour {
         print("player:"+player+" " + Minigame3Data.Checked[player,Minigame3Data.round]);
     }
 	void StopMovement(){
-		if (Input.GetKeyDown ("space")&&!check) {
+		if (controls.GetButtonDown("stop")&&!check && Time.timeScale>0) {
 			CheckForCollisions ();
             check = true;
         }

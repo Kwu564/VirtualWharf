@@ -11,7 +11,7 @@ public class DestroyOffScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 	void OnBecameInvisible()
 	{

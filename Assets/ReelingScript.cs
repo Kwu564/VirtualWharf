@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ReelingScript : MonoBehaviour {
     public GameObject aim;
+    public GameObject Fish;
     private Rigidbody rgbd;
+    public float tolerence;
     private float y;
+    public bool ReadyToReel = false;
     public float speed;
     // Use this for initialization
     private void OnEnable()
@@ -13,14 +16,29 @@ public class ReelingScript : MonoBehaviour {
         //gameObject.transform.position = aim.transform.position;
     }
     void Start () {
-        rgbd = aim.GetComponent<Rigidbody>();
+        rgbd = Fish.GetComponent<Rigidbody>();
         y = Random.Range(0f, 5f);
         StartCoroutine("move");
     }
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if(Fish.transform.localPosition.x - aim.transform.localPosition.x > 0)
+        {
+            print("Right");
+        }else if(Fish.transform.localPosition.x - aim.transform.localPosition.x < 0)
+        {
+            print("Left");
+        } 
+        if(Mathf.Abs(Fish.transform.localPosition.x - aim.transform.localPosition.x) > tolerence)
+        {
+            print("The fish got away");
+        }
+
+        if (ReadyToReel)
+        {
+
+        }
     }
     IEnumerator move()
     {
@@ -41,6 +59,7 @@ public class ReelingScript : MonoBehaviour {
             currCountdownValue--;
         }
         rgbd.velocity = Vector3.zero;
+        ReadyToReel = true;
 
     }
 }

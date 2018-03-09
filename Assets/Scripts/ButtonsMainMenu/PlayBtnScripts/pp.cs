@@ -43,9 +43,9 @@ public class pp : MonoBehaviour{
 		paused = false;
 //		anim.Play();
 		if (p1.GetButton("action")) {
-			SceneManager.LoadScene ("sceneOne");
+			SceneManager.LoadScene ("PlayerJoiningScreen");
 		}else if(Input.GetButtonDown("Submit")){ //checks if x button is down
-			SceneManager.LoadScene ("sceneOne");
+			SceneManager.LoadScene ("PlayerJoiningScreen");
 		}
 
 	}

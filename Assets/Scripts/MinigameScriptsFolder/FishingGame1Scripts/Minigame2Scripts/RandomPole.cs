@@ -19,6 +19,8 @@ public class RandomPole : MonoBehaviour {
 	public GameObject Pole4AnimObj;
 	private Animation Pole4Anim;
 
+    public GameObject Trophy;
+
     public bool[] SelectedPole = {false,false};
     public int RandomizedValue;
     public int WinningRod;
@@ -239,6 +241,25 @@ public class RandomPole : MonoBehaviour {
     public void OnDisable()
     {
         StopAllCoroutines();
+        if (MiniGame2Data.player1Fish > MiniGame2Data.player2Fish)
+        {
+            //GlobalData.Inventory[0].Add();
+            if (!GlobalData.Inventory[0].Contains(Trophy))
+            {
+                GlobalData.Inventory[0].Add(Trophy);
+                GlobalData.MinigameWinner = 0;
+            }
+            
+        }
+        else if(MiniGame2Data.player1Fish < MiniGame2Data.player2Fish)
+        {
+            if (!GlobalData.Inventory[1].Contains(Trophy))
+            {
+                GlobalData.Inventory[1].Add(Trophy);
+                GlobalData.MinigameWinner = 1;
+            }
+            
+        }
         SceneManager.LoadSceneAsync("sceneOne");
     }
 }

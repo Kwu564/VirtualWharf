@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LoadWorld : MonoBehaviour
 {
-    public GameObject p1, p2;
-    public GameObject cam;
-    public GameObject triggers;
+    public  GameObject p1, p2;
+    public  GameObject cam;
+    public  GameObject triggers;
     public bool start;
     private void Awake()
     {
@@ -41,35 +41,43 @@ public class LoadWorld : MonoBehaviour
         {
             GlobalData.Wharf = true;
             Minigame3Data.clear();
-            p1.SetActive(true);
-            p2.SetActive(true);
-            //StartCoroutine("MinigameEnd");
-            if (p1.GetComponent<MoveTo>().moved == false)
-            {
-                //p1.GetComponent<MoveTo>().moved = true;
-                //p2.GetComponent<MoveTo>().moved = false;
-                p1.GetComponent<MoveTo>().Continue();
-           
-            }
-            else
-            {
-            p2.GetComponent<MoveTo>().Continue();
-            //p2.GetComponent<MoveTo>().moved = true;
-            //p1.GetComponent<MoveTo>().moved = false;
-            print("loaded p2");
-            }
-            print("Turn:" + GlobalData.turn);
-            cam.SetActive(true);
+            MiniGame2Data.clear();
+                p1.SetActive(true);
+                p2.SetActive(true);
+                cam.SetActive(false);
+                cam.SetActive(true);
             triggers.SetActive(true);
+            //StartCoroutine("MinigameEnd");
+            if (p1.GetComponent<MoveTo>().moved == true)
+                {
+                    //p1.GetComponent<MoveTo>().moved = true;
+                    //p2.GetComponent<MoveTo>().moved = false;
+                    p1.GetComponent<MoveTo>().Continue();
+
+                }
+                else
+                {
+                    p2.GetComponent<MoveTo>().Continue();
+                    //p2.GetComponent<MoveTo>().moved = true;
+                    //p1.GetComponent<MoveTo>().moved = false;
+                    print("loaded p2");
+                }
+                print("Turn:" + GlobalData.turn);
+                
+            
         }
         else
         {
-            
+
             //GameObject.Find()
-            foreach (Transform child in transform)
+            try
             {
-                child.gameObject.SetActive(false);
+                foreach (Transform child in transform)
+                {
+                    child.gameObject.SetActive(false);
+                }
             }
+            catch { }
         }
     }
 

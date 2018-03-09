@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50757753295649564}
   - component: {fileID: 114395491809486804}
   - component: {fileID: 58716619309543394}
+  - component: {fileID: 114890870334238610}
   m_Layer: 0
   m_Name: SaltWaterTaffy
   m_TagString: SaltWaterTaffy
@@ -38,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1268164246459292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.151606, y: -0.15413924, z: 1.389299}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.17, y: 0.17, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -89,6 +90,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd384d140a40edd43a1460635061673e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114890870334238610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1268164246459292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb8fc6852824af44bc33a3d997b5119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type:
+  - {fileID: 21300000, guid: 8685c40451a45f74f98a219311ee2327, type: 3}
+  - {fileID: 21300000, guid: 53ccedb3108364e4daf86b89be2b3c81, type: 3}
+  - {fileID: 21300000, guid: 1d2f7274443df164091cab03b47f55ae, type: 3}
 --- !u!212 &212813171069967436
 SpriteRenderer:
   m_ObjectHideFlags: 1

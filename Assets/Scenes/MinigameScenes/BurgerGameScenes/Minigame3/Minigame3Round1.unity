@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 92601639}
   - component: {fileID: 92601638}
   - component: {fileID: 92601637}
+  - component: {fileID: 92601641}
   m_Layer: 5
   m_Name: ClassicBurgerCanvas
   m_TagString: Untagged
@@ -337,6 +338,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &92601641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92601636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c05d2cc54bc0043b90eb3083e4c28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burgers: []
+  player: 0
+  ingredients: 0
 --- !u!1 &97269214
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &335473335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1089,7 +1104,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 392935725}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
@@ -1318,8 +1333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 12.72, y: 244.59961}
-  m_SizeDelta: {x: 18.399994, y: 408.7}
+  m_AnchoredPosition: {x: 12.72, y: 726.5}
+  m_SizeDelta: {x: 51.39, y: 503.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442684485
 MonoBehaviour:
@@ -1347,14 +1362,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18382353, g: 0.39208913, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: bcf8b06867a02ea499ffe743a0f7a2e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1631,7 +1646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &552928124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1752,8 +1767,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.5, y: 91.02}
-  m_SizeDelta: {x: 392.7, y: 115}
+  m_AnchoredPosition: {x: 24.75, y: -337}
+  m_SizeDelta: {x: 590.5, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &587454766
 MonoBehaviour:
@@ -1767,7 +1782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1776,7 +1791,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 470c8d0b356aa9a4aae4ec31a09143bd, type: 3}
-    m_FontSize: 69
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1787,7 +1802,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Woodies Classic Burger
 --- !u!222 &587454767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1806,13 +1821,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
+  changed: 0
   NextRound: 1
   GoTo: Minigame3Round2
   Fails:
   - {fileID: 400493040}
   Successes:
   - {fileID: 807564728}
-  Ingredients: 9
+  Ingredients: 8
 --- !u!1 &616957351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,6 +1934,100 @@ RectTransform:
   m_AnchoredPosition: {x: 12.8, y: -89.7}
   m_SizeDelta: {x: 7.1, y: 5.9}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &618778228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1428194357943958, guid: cc14cbbe4db551c419da5d0cda8d53ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 618778229}
+  - component: {fileID: 618778232}
+  - component: {fileID: 618778231}
+  - component: {fileID: 618778230}
+  m_Layer: 5
+  m_Name: BurgerInformation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &618778229
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224440797998886748, guid: cc14cbbe4db551c419da5d0cda8d53ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 618778228}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6479.9985}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2138542748}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -280}
+  m_SizeDelta: {x: 428.1, y: 255.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &618778230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114214960065628760, guid: cc14cbbe4db551c419da5d0cda8d53ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 618778228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 2.38, y: 3.09}
+  m_UseGraphicAlpha: 1
+--- !u!114 &618778231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114559208345983598, guid: cc14cbbe4db551c419da5d0cda8d53ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 618778228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.14901961, g: 0.30588236, b: 0.31764707, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 470c8d0b356aa9a4aae4ec31a09143bd, type: 3}
+    m_FontSize: 55
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 214
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 0.5
+  m_Text: Woodies Classic Burger
+--- !u!222 &618778232
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222308391427127488, guid: cc14cbbe4db551c419da5d0cda8d53ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 618778228}
 --- !u!1 &629911980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,7 +2137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &723247444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2152,7 +2262,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4651981484683996, guid: d0f590d5ae116fd4fb9f50485ad0d21b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114586815382004914, guid: d0f590d5ae116fd4fb9f50485ad0d21b,
         type: 2}
@@ -2196,7 +2306,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 95047722935959076, guid: d0f590d5ae116fd4fb9f50485ad0d21b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 111451458477561700, guid: d0f590d5ae116fd4fb9f50485ad0d21b, type: 2}
+    - {fileID: 95047722935959076, guid: d0f590d5ae116fd4fb9f50485ad0d21b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d0f590d5ae116fd4fb9f50485ad0d21b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &807564728
@@ -2285,7 +2402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &807681635
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2408,8 +2525,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 12.72, y: 220.2998}
-  m_SizeDelta: {x: 18.399994, y: 408.7}
+  m_AnchoredPosition: {x: 12.72, y: 726.5}
+  m_SizeDelta: {x: 51.39, y: 503.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &875162340
 Rigidbody2D:
@@ -2482,14 +2599,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18382353, g: 0.39208913, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: bcf8b06867a02ea499ffe743a0f7a2e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2521,7 +2638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &886943805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2700,7 +2817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1056186318
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2911,7 +3028,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1077468814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3017,7 +3134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1112574502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3223,7 +3340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1206495085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3434,7 +3551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1246404389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3534,7 +3651,6 @@ GameObject:
   - component: {fileID: 1255558085}
   - component: {fileID: 1255558084}
   - component: {fileID: 1255558089}
-  - component: {fileID: 1255558088}
   - component: {fileID: 1255558090}
   m_Layer: 0
   m_Name: Main Camera
@@ -3607,23 +3723,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1255558088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1255558083}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a9c1f2716dfb24fbf5c610712fff81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CountdownAnim: {fileID: 0}
-  AnimShows: 0
-  TimeStops: 0
-  CountdownGameObj: {fileID: 0}
-  timer: {fileID: 0}
-  pause: {fileID: 1255558089}
 --- !u!114 &1255558089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3796,7 +3895,61 @@ MonoBehaviour:
       _assignMouseOnStart: 1
       _assignKeyboardOnStart: 1
       _excludeFromControllerAutoAssignment: 1
-    actions: []
+    - _id: 1
+      _name: Player0
+      _descriptiveName: Player0
+      _startPlaying: 1
+      _defaultJoystickMaps:
+      - _enabled: 1
+        _categoryId: 0
+        _layoutId: 0
+      _defaultMouseMaps: []
+      _defaultKeyboardMaps:
+      - _enabled: 1
+        _categoryId: 0
+        _layoutId: 0
+      _defaultCustomControllerMaps: []
+      _startingCustomControllers: []
+      _assignMouseOnStart: 1
+      _assignKeyboardOnStart: 1
+      _excludeFromControllerAutoAssignment: 0
+    - _id: 2
+      _name: Player1
+      _descriptiveName: Player1
+      _startPlaying: 1
+      _defaultJoystickMaps:
+      - _enabled: 1
+        _categoryId: 0
+        _layoutId: 0
+      _defaultMouseMaps: []
+      _defaultKeyboardMaps:
+      - _enabled: 1
+        _categoryId: 0
+        _layoutId: 0
+      _defaultCustomControllerMaps: []
+      _startingCustomControllers: []
+      _assignMouseOnStart: 0
+      _assignKeyboardOnStart: 1
+      _excludeFromControllerAutoAssignment: 0
+    actions:
+    - _id: 0
+      _name: stop
+      _type: 1
+      _descriptiveName: Action0
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
+    - _id: 1
+      _name: pause
+      _type: 1
+      _descriptiveName: Action0
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
     actionCategories:
     - _name: Default
       _descriptiveName: Default
@@ -3806,7 +3959,7 @@ MonoBehaviour:
     actionCategoryMap:
       list:
       - categoryId: 0
-        actionIds: 
+        actionIds: 0000000001000000
     inputBehaviors:
     - _id: 0
       _name: Default
@@ -3855,13 +4008,82 @@ MonoBehaviour:
     - _name: Default
       _descriptiveName: Default
       _id: 0
-    joystickMaps: []
-    keyboardMaps: []
+    joystickMaps:
+    - id: 0
+      categoryId: 0
+      layoutId: 0
+      name: 
+      hardwareGuidString: cd9718bf-a87a-44bc-8716-60a0def28a9f
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: 0
+        _elementType: 1
+        _elementIdentifierId: 6
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 1
+        _elementType: 1
+        _elementIdentifierId: 13
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 1
+        _elementType: 1
+        _elementIdentifierId: 14
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 1
+        _elementType: 1
+        _elementIdentifierId: 12
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+    keyboardMaps:
+    - id: 0
+      categoryId: 0
+      layoutId: 0
+      name: 
+      hardwareGuidString: 
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: 0
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 32
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
     mouseMaps: []
     customControllerMaps: []
     customControllers: []
-    playerIdCounter: 1
-    actionIdCounter: 0
+    playerIdCounter: 3
+    actionIdCounter: 2
     actionCategoryIdCounter: 1
     inputBehaviorIdCounter: 1
     mapCategoryIdCounter: 1
@@ -3869,8 +4091,8 @@ MonoBehaviour:
     keyboardLayoutIdCounter: 1
     mouseLayoutIdCounter: 1
     customControllerLayoutIdCounter: 1
-    joystickMapIdCounter: 0
-    keyboardMapIdCounter: 0
+    joystickMapIdCounter: 6
+    keyboardMapIdCounter: 1
     mouseMapIdCounter: 0
     customControllerMapIdCounter: 0
     customControllerIdCounter: 0
@@ -3914,16 +4136,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282080058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9.9999695}
-  m_LocalScale: {x: 1.0001125, y: 1.0001125, z: 1.0001125}
+  m_LocalPosition: {x: 0, y: 0, z: 9.999755}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1732427843}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48947.215, y: 91.01994}
-  m_SizeDelta: {x: 392.7, y: 115}
+  m_AnchoredPosition: {x: 24.75, y: -337}
+  m_SizeDelta: {x: 590.5, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282080060
 MonoBehaviour:
@@ -3937,13 +4159,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
+  changed: 0
   NextRound: 1
   GoTo: Minigame3Round2
   Fails:
   - {fileID: 1027061563}
   Successes:
   - {fileID: 2108949936}
-  Ingredients: 9
+  Ingredients: 8
 --- !u!114 &1282080061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3956,7 +4179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3965,10 +4188,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 470c8d0b356aa9a4aae4ec31a09143bd, type: 3}
-    m_FontSize: 69
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 69
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3976,7 +4199,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Woodies Classic Burger
 --- !u!222 &1282080062
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4437,7 +4660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1496588973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4880,7 +5103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1661363567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5058,7 +5281,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1665067284}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d2024cbb7c52c46841d3e05fa7fcc9, type: 3}
   m_Name: 
@@ -5131,6 +5354,7 @@ GameObject:
   - component: {fileID: 1732427843}
   - component: {fileID: 1732427845}
   - component: {fileID: 1732427844}
+  - component: {fileID: 1732427846}
   m_Layer: 5
   m_Name: BKG Image of FoodCanvas
   m_TagString: Untagged
@@ -5213,6 +5437,28 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1732427842}
+--- !u!114 &1732427846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1732427842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c05d2cc54bc0043b90eb3083e4c28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burgers:
+  - {fileID: 1056186317}
+  - {fileID: 807681634}
+  - {fileID: 1206495084}
+  - {fileID: 1112574501}
+  - {fileID: 2135777798}
+  - {fileID: 1496588972}
+  - {fileID: 335473334}
+  - {fileID: 1749145179}
+  player: 0
+  ingredients: 8
 --- !u!1 &1749145179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5231,7 +5477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1749145180
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5447,7 +5693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1772785742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5979,7 +6225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2117454855
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6085,7 +6331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2135777799
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6183,6 +6429,7 @@ GameObject:
   - component: {fileID: 2138542748}
   - component: {fileID: 2138542750}
   - component: {fileID: 2138542749}
+  - component: {fileID: 2138542751}
   m_Layer: 5
   m_Name: BKG Image of FoodCanvas
   m_TagString: Untagged
@@ -6224,6 +6471,7 @@ RectTransform:
   - {fileID: 587454765}
   - {fileID: 400493041}
   - {fileID: 807564729}
+  - {fileID: 618778229}
   m_Father: {fileID: 92601640}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6265,3 +6513,25 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2138542747}
+--- !u!114 &2138542751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2138542747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c05d2cc54bc0043b90eb3083e4c28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burgers:
+  - {fileID: 1772785741}
+  - {fileID: 1077468813}
+  - {fileID: 1246404388}
+  - {fileID: 723247443}
+  - {fileID: 2117454854}
+  - {fileID: 886943804}
+  - {fileID: 1661363566}
+  - {fileID: 552928123}
+  player: 0
+  ingredients: 8

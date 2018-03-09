@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-
+using Rewired;
 public class PauseMenu : MonoBehaviour {
 	public GameObject InGameMenuPopUp;
 	public bool pauseMenuShows;
@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour {
         pauseMenuShows = false;
 	}
 	void onPause(){
-		if (Input.GetKeyDown (KeyCode.P)) {
+		if (Input.GetKeyDown (KeyCode.P)  ) {
 			pauseMenuShows = !pauseMenuShows;
 		}
 	}

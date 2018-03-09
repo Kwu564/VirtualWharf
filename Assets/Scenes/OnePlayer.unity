@@ -50233,6 +50233,18 @@ Transform:
   m_PrefabParentObject: {fileID: 4708790933797254, guid: 11ed92e5f642d8b4bb2d2d1421bbeeec,
     type: 2}
   m_PrefabInternal: {fileID: 2100186647}
+--- !u!1 &2103932165 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  m_PrefabInternal: {fileID: 1999656191}
+--- !u!45 &2103932170
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2103932165}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: d4cd6577352fd4946994aa7e3e3609e4, type: 2}
 --- !u!1001 &2109089084
 Prefab:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using UnityEditor.Animations;
+using UnityEngine.Animations;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
@@ -12,12 +12,13 @@ public class Count : MonoBehaviour {
 	public Text timer;
 	public PauseMenu pause;
 	// Use this for initialization
-	void Start () {
+	void  Awake() {
 		CheckIfAnimShows ();
 		CountdownGameObj.SetActive (true);
 		CountdownAnim = CountdownGameObj.GetComponent<Animation> ();
 		pause.enabled = false;
-		StartCoroutine ("Freeze");
+        Time.timeScale = 0.0f;
+        StartCoroutine ("Freeze");
 	}
 	IEnumerator Freeze(){
 		yield return new WaitForEndOfFrame();

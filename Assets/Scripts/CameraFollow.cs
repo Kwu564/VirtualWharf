@@ -34,6 +34,11 @@ public class CameraFollow : MonoBehaviour
         if (Vector3.Distance(targetCamPos, transform.position) > spacing)
         {
             transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+            GlobalData.CamMoving = true;
+        }
+        else
+        {
+            GlobalData.CamMoving = false;
         }
     }
 }

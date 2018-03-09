@@ -64,6 +64,9 @@ public class MoveTo : MonoBehaviour {
 
     //Keep track of triggers
     public bool triggered = false;
+
+    //Player turn text
+    public Text WhoseTurn;
     // Use this for initialization
     private void Awake()
     {
@@ -99,20 +102,6 @@ public class MoveTo : MonoBehaviour {
         
         // Grab the current cursor position
         cursorPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
-        // Set id to the current turn #,
-        // This determines whose turn it is
-        //id = GlobalData.turn;
-        // Continuously check the player id
-        /*if (GlobalData.turn == 0)
-        {
-            GameObject.Find("Player1").GetComponent<MoveTo>().isMoving= true;
-            GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = false;
-        }
-        else if (GlobalData.turn == 1)
-        {
-            GameObject.Find("Player2").GetComponent<MoveTo>().isMoving = true;
-            GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = false;
-        }*/
         if (Input.GetKeyDown("n"))
         {
             foreach (GameObject item in GlobalData.P1Inventory)
@@ -127,23 +116,7 @@ public class MoveTo : MonoBehaviour {
         {
             print(id);
             print(gameObject);
-            /* // Set the origin of the raycast to the cursor's screen position
-             Ray ray = Camera.main.ScreenPointToRay(cursorPos);
-             // Stores info regarding the point of contact
-             RaycastHit hit;
-
-             // If raycast intersects with a collider, get the hit location,
-             // otherwise get the screen position in 3d world space
-             if (Physics.Raycast(ray, out hit, 1000f))
-             {
-                 wordPos = hit.point;
-             } else
-             {
-                 wordPos = Camera.main.ScreenToWorldPoint(cursorPos);
-             }
-             // Move agent to the wordPos position
-             agent.destination = wordPos;*/
-            //int steps = (int)Random.Range(1, 6);
+            WhoseTurn.text = "";
             Dice.SetActive(true); 
             agent.isStopped = false;
             int step = (int)Random.Range(1.9f,4.9f);
