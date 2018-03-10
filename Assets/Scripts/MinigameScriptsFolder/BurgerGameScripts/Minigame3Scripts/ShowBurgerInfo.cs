@@ -35,7 +35,7 @@ public class ShowBurgerInfo : MonoBehaviour {
 		show.enabled = true;
 		pause.enabled = false;
 		BurgerInfoIsShowing = true;
-		yield return new WaitForSecondsRealtime (1f);
+		yield return new WaitForSecondsRealtime (5f);
 		BurgerInfoIsShowing = false;
         //Time.timeScale = 1;
         pause.enabled = true;

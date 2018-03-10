@@ -40,6 +40,7 @@ public class LoadWorld : MonoBehaviour
         if (scene.name == "sceneOne")
         {
             GlobalData.Wharf = true;
+            DynamicGI.UpdateEnvironment();
             Minigame3Data.clear();
             MiniGame2Data.clear();
                 p1.SetActive(true);

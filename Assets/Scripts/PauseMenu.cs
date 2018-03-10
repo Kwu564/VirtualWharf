@@ -14,26 +14,38 @@ public class PauseMenu : MonoBehaviour {
 	}
 	void onPause(){
 		if (Input.GetKeyDown (KeyCode.P)  ) {
+            print("toggle");
 			pauseMenuShows = !pauseMenuShows;
-		}
+            
+        }
 	}
 	// Update is called once per frame
 	void Update () {
-		
-		if (!pauseMenuShows )
-		{
-			onPause ();
-			// unpause
-			Time.timeScale=1;
-			// don't show pause screen
-			InGameMenuPopUp.SetActive (false);
-		}
-		else if( pauseMenuShows ){
-			onPause ();
-			// pause
-			Time.timeScale=0;
-			// show pause screen
-			InGameMenuPopUp.SetActive (true);
-		}
-	}
+        onPause();
+        if (!pauseMenuShows)
+        {
+            //onPause();
+            // unpause
+            if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+            }
+            // don't show pause screen
+            InGameMenuPopUp.SetActive(false);
+            print(Time.timeScale);
+        }
+        else if (pauseMenuShows)
+        {
+            //onPause();
+            // pause
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+            }
+            // show pause screen
+            InGameMenuPopUp.SetActive(true);
+            print(Time.timeScale);
+        }
+        //print(Time.timeScale);
+    }
 }

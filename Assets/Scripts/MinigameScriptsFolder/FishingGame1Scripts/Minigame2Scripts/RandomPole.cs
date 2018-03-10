@@ -31,7 +31,14 @@ public class RandomPole : MonoBehaviour {
     public int P1Rod = 4;
     public int P2Rod = 4;
     // Fill these values with fish?
-    public int[] SelectedFish = new int[] { 0, 1, 2, 3 };
+    public List<GameObject> SelectedFish;
+
+    //Fish popup
+    public GameObject popup;
+    public Text FishName;
+    public Image FishImg;
+    public Text WinnerName;
+
     public Text[] Exclam;
     // Use this for initialization
     void Start () {
@@ -82,38 +89,14 @@ public class RandomPole : MonoBehaviour {
             Pole3Anim.Sample();
             Pole4Anim.Stop();
         }
-
-        int RandomizedVal = (SelectedFish[Random.Range(0, SelectedFish.Length)]);
+    
         Exclam[WinningRod].gameObject.SetActive(false);
         // Show fish here
-        if (RandomizedVal == 0)
-        {
-            Debug.Log("You got 0");
-        }
-        if (RandomizedVal == 1)
-        {
-            Debug.Log("You got 1");
-        }
-        if (RandomizedVal == 2)
-        {
-            Debug.Log("You got 2");
-        }
-        if (RandomizedVal == 3)
-        {
-            Debug.Log("You got 3");
-        }
-        if(P1Rod == WinningRod)
-        {
-            print("Player1 won!");
-            MiniGame2Data.player1Fish += 1;
-        }
-        else
-        {
-            print("Player2 won!");
-            MiniGame2Data.player2Fish += 1;
-        }
-        P1Rod = -1;
-        P2Rod = -1;
+        
+        StartCoroutine("Info");
+        
+        //P1Rod = -1;
+        //P2Rod = -1;
         set = false;
         SelectedPole[1] = false;
         SelectedPole[0] = false;
@@ -147,8 +130,7 @@ public class RandomPole : MonoBehaviour {
         {
             mark.gameObject.SetActive(false);
         }
-        Exclam[WinningRod].gameObject.SetActive(true);
-        set = true;
+      
 
 		if (WinningRod == 0) {
 			Pole1Anim ["Pole1Animation"].speed = 0.6666667f;
@@ -165,16 +147,45 @@ public class RandomPole : MonoBehaviour {
 			Pole4Anim ["Pole1Animation"].speed = 0.6666667f;
 			Pole4Anim.Play ();
 		} 
-		
+	    	
         float motorLevel = 1.00f; // full motor speed
         float duration = 1.1f; // 2 seconds
         PlayerOne.SetVibration(0,motorLevel, duration);
         PlayerOne.SetVibration(1,motorLevel, duration);
         PlayerTwo.SetVibration(0, motorLevel, duration);
         PlayerTwo.SetVibration(1, motorLevel, duration);
-
+        Exclam[WinningRod].gameObject.SetActive(true);
+        set = true;
     }
 
+    IEnumerator Info()
+    {
+        Time.timeScale = 0f;
+        
+        GameObject RandomizedVal = SelectedFish[Mathf.RoundToInt(Random.Range(0f, (float)SelectedFish.Count-1))];
+        popup.SetActive(true);
+        FishName.text = RandomizedVal.name;
+        FishImg.sprite = RandomizedVal.GetComponent<Image>().sprite;
+        if (P1Rod == WinningRod)
+        {
+            WinnerName.text = "Player 1 caught";
+            print("Player1 won!");
+            MiniGame2Data.player1Fish += 1;
+        }
+        else if(P2Rod == WinningRod)
+        {
+            WinnerName.text = "Player 2 caught";
+            print("Player1 won!");
+            MiniGame2Data.player2Fish += 1;
+        }
+        //P1Rod = -1;
+        //P2Rod = -1;
+        yield return new WaitForSecondsRealtime(.8f);
+        popup.SetActive(false);
+        P1Rod = -1;
+        P2Rod = -1;
+        Time.timeScale = 1f;
+    }
     // Update is called once per frame
     void Update () {
         if (SelectedPole[0] == false)

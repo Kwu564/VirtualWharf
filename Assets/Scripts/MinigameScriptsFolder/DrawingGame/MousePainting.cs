@@ -39,7 +39,8 @@ public class MousePainting : MonoBehaviour {
             Vector3 pos = Camera.main.ViewportToWorldPoint(touch1Pos);
             pos.z = 10;
             Instantiate(Dot, pos, Quaternion.identity, transform);
+            print(ds4);
         }
-        //print(ds4);
+        //
     }
 }
