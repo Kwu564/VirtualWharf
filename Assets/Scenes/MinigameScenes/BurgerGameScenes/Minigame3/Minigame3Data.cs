@@ -8,6 +8,15 @@ public class Minigame3Data {
     static public int[,] Checked = new int[2,4];
     static public int round = 0;
     //static public int round = 0;
+	//
+	//
+	//
+	//
+	/// <summary>
+	/// 
+	/// //
+	/// 
+	/// </summary>
     static public bool[,] perfect = new bool[2,4];
     public static void clear()
     {

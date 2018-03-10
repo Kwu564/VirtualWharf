@@ -32,11 +32,10 @@ public class Count : MonoBehaviour {
 		timer.text = "GO!";
 		yield return new WaitForSecondsRealtime(.9f);
 		timer.text = "";
-        Time.timeScale = 1f;
-        pause.enabled = true;
-        
+		Time.timeScale = 1f;
+		pause.enabled = true;
 
-    }
+	}
 
 
 	void CheckIfAnimShows(){

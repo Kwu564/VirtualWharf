@@ -5583,7 +5583,6 @@ MonoBehaviour:
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 844381973}
-  target: {x: 0, y: 0, z: 0}
   LevelName: Minigame1
 --- !u!1001 &185576642
 Prefab:
@@ -7888,7 +7887,6 @@ MonoBehaviour:
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 969157294}
-  target: {x: 0, y: 0, z: 0}
   LevelName: Minigame2
 --- !u!1001 &279807037
 Prefab:
@@ -21014,7 +21012,6 @@ MonoBehaviour:
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 2134746515}
-  target: {x: 0, y: 0, z: 0}
   LevelName: Minigame3Round1
 --- !u!136 &768830120
 CapsuleCollider:
@@ -36432,7 +36429,6 @@ MonoBehaviour:
   cam: {fileID: 0}
   triggers: {fileID: 0}
   LoadScreen: {fileID: 0}
-  target: {x: 0, y: 0, z: 0}
   LevelName: CreditsPage
 --- !u!1001 &1328776153
 Prefab:
@@ -37027,7 +37023,6 @@ MonoBehaviour:
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 844381973}
-  target: {x: -9.5, y: 7.5, z: -38.2}
   LevelName: Minigame5
 --- !u!136 &1338562005
 CapsuleCollider:

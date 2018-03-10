@@ -39,6 +39,7 @@ public class LoadWorld : MonoBehaviour
         print("Load");
         if (scene.name == "sceneOne")
         {
+            Time.timeScale = 1;
             GlobalData.Wharf = true;
             DynamicGI.UpdateEnvironment();
             Minigame3Data.clear();

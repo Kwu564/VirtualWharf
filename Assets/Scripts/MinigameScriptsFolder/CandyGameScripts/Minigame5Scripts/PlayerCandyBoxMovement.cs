@@ -6,6 +6,7 @@ using UnityEngine;
 using Rewired;
 public class PlayerCandyBoxMovement : MonoBehaviour {
 	public float Speed;
+	public Sprite RedLicoriceWheelMeter, LicoricePastelMeter, DarkchocoMeter, POMeter, SWTMeter;
 	public GameObject RedLicoriceWheelUI;
 	public GameObject LicoricePastelUI;
 	public GameObject DarkChocolateRockyRoadBitsUI;
@@ -171,14 +172,18 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 		if (SRenderer.sprite == LicoricePastelsBox) {
 			RedLicoriceWheelUI.gameObject.SetActive (false);
 			LicoricePastelUI.gameObject.SetActive (true);
+			CandyBoxMeter.sprite = LicoricePastelMeter;
 		} else if (SRenderer.sprite == DarkChocolateRockyRoadBitsBox) {
 			LicoricePastelUI.gameObject.SetActive (false);
 			DarkChocolateRockyRoadBitsUI.gameObject.SetActive (true);
+			CandyBoxMeter.sprite = DarkchocoMeter;
 		} else if (SRenderer.sprite == PeachyOsBox) {
 			DarkChocolateRockyRoadBitsUI.gameObject.SetActive (false);
 			PeachyOsUI.gameObject.SetActive (true);
+			CandyBoxMeter.sprite = POMeter;
 		} else if (SRenderer.sprite == SaltWaterTaffyBox) {
 			PeachyOsUI.gameObject.SetActive (false);
+			CandyBoxMeter.sprite = SWTMeter;
 			SaltWaterTaffyUI.gameObject.SetActive (true);
 		}
 	}

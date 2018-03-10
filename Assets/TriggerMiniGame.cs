@@ -8,7 +8,6 @@ public class TriggerMiniGame : MonoBehaviour {
     public GameObject cam;
     public GameObject triggers;
     public GameObject LoadScreen;
-    public Vector3 target;
     public string LevelName;
     //private bool triggered = false;
     void Start()
@@ -28,8 +27,8 @@ public class TriggerMiniGame : MonoBehaviour {
             cam.SetActive(false);
             triggers.SetActive(false);*/
             GlobalData.Wharf = false;
-            
-            StartCoroutine("LoadNewScene",other.gameObject);
+            LoadScreen.SetActive(true);
+            StartCoroutine("LoadNewScene");
             //SceneManager.LoadScene(LevelName);
             //gameObject.SetActive(false);
 
@@ -48,32 +47,9 @@ public class TriggerMiniGame : MonoBehaviour {
         other.gameObject.GetComponent<MoveTo>().triggered = false;
     }
 
-    IEnumerator LoadNewScene(GameObject player)
+    IEnumerator LoadNewScene()
     {
 
-        player.GetComponent<MoveTo>().agent.isStopped = true;
-        cam.GetComponent<CameraFollow>().enabled = false;
-        Vector3 original = cam.transform.position;
-        //target.z = original.z;
-        Quaternion rotate = cam.transform.rotation;
-        //cam.transform.LookAt(gameObject.transform);
-        float transitionTime = 3.5f;
-        while (transitionTime > 0)
-        {
-            //cam.transform.Translate();
-            transitionTime -= .02f;
-            cam.transform.position = Vector3.Lerp(original, target, (3.5f - transitionTime) / 3.5f);
-            
-
-            yield return new WaitForSeconds(.02f);
-        }
-        
-        yield return new WaitForSeconds(1f);
-        LoadScreen.SetActive(true);
-        //cam.transform.rotation = rotate;
-        cam.transform.position = original;
-        cam.GetComponent<CameraFollow>().enabled = false;
-        //cam.transform.rotation = original;
         //p1.GetComponent<MoveTo>().agent.isStopped = true;
         //p2.GetComponent<MoveTo>().agent.isStopped = true;
         // This line waits for 3 seconds before executing the next line in the coroutine.
