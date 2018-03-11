@@ -10,6 +10,7 @@ public static class GlobalData{
     static public bool[] moved = { false, false };
     static public bool created = false;
     static public int turn = 1;
+    static public bool FirstLoad = true;
     static public bool Wharf = true;
     static public bool CamMoving = false;
     static public List<GameObject> P1Inventory = new List<GameObject> ();

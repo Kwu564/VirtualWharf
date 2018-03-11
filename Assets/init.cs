@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class init : MonoBehaviour {
-
+    private static GameObject Me;
     private void Awake()
     {
-        if (GlobalData.players[0] == null || GlobalData.players[1] == null)
+        if (GlobalData.FirstLoad)
         {
+            Me = gameObject;
             DontDestroyOnLoad(gameObject);
         }
         else

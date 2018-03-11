@@ -16,13 +16,14 @@ public class Side : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-    }
-    void Start () {
-        
-		foreach(Transform child in transform)
+        foreach (Transform child in transform)
         {
             tiles.Add(child.gameObject);
         }
+    }
+    void Start () {
+        
+		
         //tiles.Reverse();
         //print(tiles[3].name);
 	}

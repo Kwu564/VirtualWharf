@@ -43,6 +43,7 @@ public class OnSwitch : MonoBehaviour {
         //yield return new WaitForSeconds(2f);
         if (GameObject.Find("Player1").GetComponent<MoveTo>().isMoving)
         {
+            WhoseTurn.text = "";
             if (GlobalData.MinigameWinner == 0)
             {
                 Trophy.SetActive(true);
@@ -55,7 +56,9 @@ public class OnSwitch : MonoBehaviour {
                 Trophy.SetActive(false);
 
             }
+            yield return new WaitUntil(() => Player2 != null);
             cam.GetComponent<CameraFollow>().target = Player2.transform;
+            yield return new WaitWhile(GlobalData.GetCamMoving);
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = false;
             if (GlobalData.MinigameWinner == 1)
             {
@@ -82,6 +85,7 @@ public class OnSwitch : MonoBehaviour {
         }
         else
         {
+            WhoseTurn.text = "";
             if (GlobalData.MinigameWinner == 1)
             {
                 Trophy.SetActive(true);
@@ -93,8 +97,10 @@ public class OnSwitch : MonoBehaviour {
                 print("Winner is: " + (GlobalData.MinigameWinner + 1));
                 Trophy.SetActive(false);
             }
+            yield return new WaitUntil(() => Player1 != null);
+
             cam.GetComponent<CameraFollow>().target = Player1.transform;
-            
+            yield return new WaitWhile(GlobalData.GetCamMoving);
             if (GlobalData.MinigameWinner == 0)
             {
                 yield return new WaitWhile(GlobalData.GetCamMoving);

@@ -24,6 +24,8 @@ public class MoveTo : MonoBehaviour {
     [SerializeField]
     float m_GroundCheckDistance = 0.1f;
 
+    //public GameObject cam;
+
     Rigidbody m_Rigidbody;
     Animator m_Animator;
     float m_OrigGroundCheckDistance;
@@ -65,11 +67,16 @@ public class MoveTo : MonoBehaviour {
     //Keep track of triggers
     public bool triggered = false;
 
+    //Keep track of when we're done moving
+    public bool DoneMoving = false;
+
     //Player turn text
     public Text WhoseTurn;
     // Use this for initialization
     private void Awake()
     {
+        map = wharf.GetComponent<Side>();
+        Change = Switch.GetComponent<OnSwitch>();
         DontDestroyOnLoad(gameObject);
         if (GlobalData.players[id] == null)
         {
@@ -94,8 +101,7 @@ public class MoveTo : MonoBehaviour {
     }
     void OnEnable()
     {
-        map = wharf.GetComponent<Side>();
-        Change = Switch.GetComponent<OnSwitch>();
+        
     }
     void Update()
     {
@@ -114,12 +120,13 @@ public class MoveTo : MonoBehaviour {
         // Detect key mapped input
         if (ReInput.players.GetPlayer(id).GetButtonDown("action") && !moved && isMoving && !clicked)
         {
+            GlobalData.FirstLoad = false;
             print(id);
             print(gameObject);
             WhoseTurn.text = "";
             Dice.SetActive(true); 
             agent.isStopped = false;
-            int step = (int)Random.Range(1.9f,4.9f);
+            int step = (int)Random.Range(1.5f,4.9f);
             end = current + step;
             Dice.transform.GetChild(0).gameObject.GetComponent<Text>().text = step.ToString();
             StartCoroutine("Roll");
@@ -160,13 +167,22 @@ public class MoveTo : MonoBehaviour {
                 //clicked = false;
                 print("Arrived");
                 moved = false;
-                Change.TaskOnClick();
+                DoneMoving = true;
+                if (GlobalData.Wharf)
+                {
+                    Continue();
+                }           
                 
 
                 // agent.isStopped = true;
             }
 
         }
+    }
+
+    public bool GetDoneMoving()
+    {
+        return DoneMoving;
     }
 
     void UpdateAnimator(Vector3 move)
@@ -202,15 +218,13 @@ public class MoveTo : MonoBehaviour {
 
     public void Continue()
     {
-        try
-        {
-            agent.destination = map.NextTile(current).transform.position;
-            agent.isStopped = false;
-        }
-        catch
-        {
-
-        }
+        Change.TaskOnClick();
+        //while(agent == null || map==null)
+        //{
+        //print("waiting");
+        //}
+        //agent.destination = map.NextTile(current).transform.position;
+        //agent.isStopped = false;
     }
     IEnumerator Roll()
     {

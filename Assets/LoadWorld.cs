@@ -37,9 +37,10 @@ public class LoadWorld : MonoBehaviour
     void OnLevelLoad(Scene scene, LoadSceneMode mode)
     {
         print("Load");
-        if (scene.name == "sceneOne")
+        if (scene.name == "sceneOne" && !GlobalData.FirstLoad)
         {
             Time.timeScale = 1;
+            
             GlobalData.Wharf = true;
             DynamicGI.UpdateEnvironment();
             Minigame3Data.clear();
@@ -51,14 +52,16 @@ public class LoadWorld : MonoBehaviour
             triggers.SetActive(true);
             //StartCoroutine("MinigameEnd");
             if (p1.GetComponent<MoveTo>().moved == true)
-                {
-                    //p1.GetComponent<MoveTo>().moved = true;
-                    //p2.GetComponent<MoveTo>().moved = false;
-                    p1.GetComponent<MoveTo>().Continue();
+            {
+                //p1.GetComponent<MoveTo>().agent.isStopped = false;
+                //p1.GetComponent<MoveTo>().moved = true;
+                //p2.GetComponent<MoveTo>().moved = false;
+                p1.GetComponent<MoveTo>().Continue();
 
                 }
                 else
                 {
+                    //p2.GetComponent<MoveTo>().agent.isStopped = false;
                     p2.GetComponent<MoveTo>().Continue();
                     //p2.GetComponent<MoveTo>().moved = true;
                     //p1.GetComponent<MoveTo>().moved = false;

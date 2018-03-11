@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -5583,6 +5583,9 @@ MonoBehaviour:
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 844381973}
+  TargetObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   LevelName: Minigame1
 --- !u!1001 &185576642
 Prefab:
@@ -7887,6 +7890,9 @@ MonoBehaviour:
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 969157294}
+  TargetObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   LevelName: Minigame2
 --- !u!1001 &279807037
 Prefab:
@@ -21012,6 +21018,9 @@ MonoBehaviour:
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 2134746515}
+  TargetObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   LevelName: Minigame3Round1
 --- !u!136 &768830120
 CapsuleCollider:
@@ -21296,6 +21305,7 @@ GameObject:
   - component: {fileID: 773818468}
   - component: {fileID: 773818469}
   - component: {fileID: 773818470}
+  - component: {fileID: 773818471}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -21401,6 +21411,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InGameMenuPopUp: {fileID: 1354143768}
   pauseMenuShows: 1
+--- !u!82 &773818471
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773818463}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 868f6ff6ec6ced942a3d35d8fdffda95, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &776374374
 Prefab:
   m_ObjectHideFlags: 0
@@ -35668,6 +35758,7 @@ MonoBehaviour:
   Switch: {fileID: 954933288}
   Dice: {fileID: 800496128}
   triggered: 0
+  DoneMoving: 0
   WhoseTurn: {fileID: 299490265}
 --- !u!195 &1307100084 stripped
 NavMeshAgent:
@@ -36429,6 +36520,9 @@ MonoBehaviour:
   cam: {fileID: 0}
   triggers: {fileID: 0}
   LoadScreen: {fileID: 0}
+  TargetObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   LevelName: CreditsPage
 --- !u!1001 &1328776153
 Prefab:
@@ -37023,6 +37117,9 @@ MonoBehaviour:
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 844381973}
+  TargetObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   LevelName: Minigame5
 --- !u!136 &1338562005
 CapsuleCollider:
@@ -55807,6 +55904,7 @@ MonoBehaviour:
   Switch: {fileID: 954933288}
   Dice: {fileID: 800496128}
   triggered: 0
+  DoneMoving: 0
   WhoseTurn: {fileID: 299490265}
 --- !u!195 &2067443251 stripped
 NavMeshAgent:
