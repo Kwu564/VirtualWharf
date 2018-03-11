@@ -36,12 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/Minigame3Round1.unity
     guid: b63bb9f6886fc684e8120708a536623e
   - enabled: 1
-    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/Minigame2.unity
-    guid: 8839e59eaf1097a4d88e1e52cdcf316c
-  - enabled: 1
-    path: Assets/Scenes/MinigameScenes/FishingGame2Scenes/Minigame4/Fishing2.unity
-    guid: 2a179d66772f58d4797970731d36e9a8
-  - enabled: 1
     path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/Minigame3Round2.unity
     guid: c93c0f82fd23da044920a7f9e1843ead
   - enabled: 1
@@ -50,3 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/Minigame3Round4.unity
     guid: 0077e602dc009f34f88e1831af2b0b65
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/Minigame2.unity
+    guid: 8839e59eaf1097a4d88e1e52cdcf316c
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame2Scenes/Minigame4/Fishing2.unity
+    guid: 2a179d66772f58d4797970731d36e9a8

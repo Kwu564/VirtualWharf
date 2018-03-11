@@ -1875,7 +1875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2, y: -3.12}
+  m_AnchoredPosition: {x: -1.42, y: -3.73}
   m_SizeDelta: {x: 70, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527298245
@@ -3849,7 +3849,7 @@ MonoBehaviour:
   LicoricePastelMeter: {fileID: 21300000, guid: e234ee178242cf840b4ac057014363d9,
     type: 3}
   DarkchocoMeter: {fileID: 21300000, guid: db2ae047b58cb5d468f6a9853b6d38d6, type: 3}
-  POMeter: {fileID: 21300000, guid: 3c76e187e77e02246b7221f93f72cd58, type: 3}
+  POMeter: {fileID: 21300004, guid: 3c76e187e77e02246b7221f93f72cd58, type: 3}
   SWTMeter: {fileID: 21300000, guid: 17da1a0b3c2f0f74bad5777aeb2d2b89, type: 3}
   RedLicoriceWheelUI: {fileID: 489929502}
   LicoricePastelUI: {fileID: 1079184907}
@@ -4893,8 +4893,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.801, y: -1.57}
-  m_SizeDelta: {x: 61.227, y: 52.765}
+  m_AnchoredPosition: {x: -1.42, y: -3.73}
+  m_SizeDelta: {x: 70, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679340887
 MonoBehaviour:
@@ -4915,7 +4915,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 17da1a0b3c2f0f74bad5777aeb2d2b89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4240b070b307c5c428583a576fe613e7, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

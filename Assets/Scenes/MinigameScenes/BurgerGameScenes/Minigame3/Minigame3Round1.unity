@@ -210,35 +210,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224588105511121446, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224413671511874628, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224763217329030328, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 224281614480050494, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224379582320830864, guid: 398f72da6eb96654b9ea869d3e2d8a1c,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1407797087081228, guid: 398f72da6eb96654b9ea869d3e2d8a1c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 398f72da6eb96654b9ea869d3e2d8a1c, type: 2}
   m_IsPrefabParent: 0
@@ -1793,7 +1764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &587454765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2264,7 +2235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.63
   StartingPosition: 0
   EndingPosition: 0
   Flip: 0
@@ -2765,7 +2736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.83
   StartingPosition: 0
   EndingPosition: 0
   Flip: 1
@@ -3155,7 +3126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.4
   StartingPosition: 0
   EndingPosition: 0
   Flip: 0
@@ -3213,7 +3184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 0.8
+  ValueOfXSpeed: 0.63
   StartingPosition: 0
   EndingPosition: 0
   Flip: 0
@@ -3672,7 +3643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.6
   StartingPosition: 0
   EndingPosition: 0
   Flip: 1
@@ -4201,102 +4172,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1282080058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1282080059}
-  - component: {fileID: 1282080062}
-  - component: {fileID: 1282080061}
-  - component: {fileID: 1282080060}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1282080059
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282080058}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9.999755}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1732427843}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.75, y: -337}
-  m_SizeDelta: {x: 590.5, y: 115}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1282080060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282080058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0221bbfb6b6c0645b5c5b9ba7c9d30e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: 1
-  changed: 0
-  NextRound: 1
-  GoTo: Minigame3Round2
-  Fails:
-  - {fileID: 1027061563}
-  Successes:
-  - {fileID: 2108949936}
-  Ingredients: 8
-  trophy: {fileID: 0}
---- !u!114 &1282080061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282080058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 470c8d0b356aa9a4aae4ec31a09143bd, type: 3}
-    m_FontSize: 43
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 69
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Woodies Classic Burger
---- !u!222 &1282080062
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282080058}
 --- !u!1 &1317432229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4787,7 +4662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 0.93
+  ValueOfXSpeed: 0.83
   StartingPosition: 0
   EndingPosition: 0
   Flip: 1
@@ -5245,7 +5120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.96
   StartingPosition: 0
   EndingPosition: 0
   Flip: 1
@@ -5491,7 +5366,6 @@ RectTransform:
   - {fileID: 1056186318}
   - {fileID: 1665067285}
   - {fileID: 1027061564}
-  - {fileID: 1282080059}
   - {fileID: 2108949937}
   m_Father: {fileID: 474433715}
   m_RootOrder: 0
@@ -5869,7 +5743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.25
   StartingPosition: 0
   EndingPosition: 0
   Flip: 1
@@ -6369,7 +6243,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1732427843}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6506,7 +6380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.73
   StartingPosition: 0
   EndingPosition: 0
   Flip: 0
@@ -6564,7 +6438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 0.9
+  ValueOfXSpeed: 0.73
   StartingPosition: 0
   EndingPosition: 0
   Flip: 0

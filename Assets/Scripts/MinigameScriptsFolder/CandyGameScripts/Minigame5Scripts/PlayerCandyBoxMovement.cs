@@ -47,6 +47,7 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 		MoveBackAndForth ();
 		if (CandyCounter == 3 && SRenderer.sprite==RedLicoriceWheelBox) {
 			SRenderer.sprite = LicoricePastelsBox;
+           
             CandyBoxMeter.fillAmount = 0;
             CandyCounter = 0;
 		}
@@ -173,18 +174,26 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 			RedLicoriceWheelUI.gameObject.SetActive (false);
 			LicoricePastelUI.gameObject.SetActive (true);
 			CandyBoxMeter.sprite = LicoricePastelMeter;
-		} else if (SRenderer.sprite == DarkChocolateRockyRoadBitsBox) {
+            CandyBoxMeter.GetComponent<RectTransform>().localPosition = new Vector3(-1.45f, -2.423f, -1f);
+            CandyBoxMeter.GetComponent<RectTransform>().sizeDelta = new Vector2(50.609f, 36.852f);
+        } else if (SRenderer.sprite == DarkChocolateRockyRoadBitsBox) {
 			LicoricePastelUI.gameObject.SetActive (false);
 			DarkChocolateRockyRoadBitsUI.gameObject.SetActive (true);
-			CandyBoxMeter.sprite = DarkchocoMeter;
+            CandyBoxMeter.GetComponent<RectTransform>().localPosition = new Vector3(-1.53f, -2.47f, -1f);
+            CandyBoxMeter.GetComponent<RectTransform>().sizeDelta = new Vector2(44.211f, 32.193f);
+            CandyBoxMeter.sprite = DarkchocoMeter;
 		} else if (SRenderer.sprite == PeachyOsBox) {
 			DarkChocolateRockyRoadBitsUI.gameObject.SetActive (false);
 			PeachyOsUI.gameObject.SetActive (true);
-			CandyBoxMeter.sprite = POMeter;
+            CandyBoxMeter.GetComponent<RectTransform>().localPosition = new Vector3(-1.51381f, -2.3f, -1f);
+            CandyBoxMeter.GetComponent<RectTransform>().sizeDelta = new Vector2(46.967f, 40.476f);
+            CandyBoxMeter.sprite = POMeter;
 		} else if (SRenderer.sprite == SaltWaterTaffyBox) {
 			PeachyOsUI.gameObject.SetActive (false);
 			CandyBoxMeter.sprite = SWTMeter;
-			SaltWaterTaffyUI.gameObject.SetActive (true);
+            CandyBoxMeter.GetComponent<RectTransform>().localPosition = new Vector3(-.801f, -1.57f, -1f);
+            CandyBoxMeter.GetComponent<RectTransform>().sizeDelta = new Vector2(61.227f, 52.765f);
+            SaltWaterTaffyUI.gameObject.SetActive (true);
 		}
 	}
 }
