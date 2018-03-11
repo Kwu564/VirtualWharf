@@ -951,7 +951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.96
   StartingPosition: 0
   EndingPosition: 0
   Flip: 1
@@ -2481,7 +2481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.4
   StartingPosition: 0
   EndingPosition: 0
   Flip: 0
@@ -2896,7 +2896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.25
   StartingPosition: 0
   EndingPosition: 0
   Flip: 1
@@ -3213,7 +3213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.8
   StartingPosition: 0
   EndingPosition: 0
   Flip: 0
@@ -3476,7 +3476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.6
   StartingPosition: 0
   EndingPosition: 0
   Flip: 1
@@ -4787,7 +4787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.93
   StartingPosition: 0
   EndingPosition: 0
   Flip: 1
@@ -6564,7 +6564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  ValueOfXSpeed: 1
+  ValueOfXSpeed: 0.9
   StartingPosition: 0
   EndingPosition: 0
   Flip: 0
