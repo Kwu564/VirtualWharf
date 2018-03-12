@@ -1716,7 +1716,7 @@ MonoBehaviour:
   ControlPage: {fileID: 1386162968}
   VideoIsPlaying: 0
   VidScript: {fileID: 218405930}
-  GoToScene: Minigame5
+  GoToScene: Minigame3Round1
 --- !u!1 &1051128127
 GameObject:
   m_ObjectHideFlags: 0

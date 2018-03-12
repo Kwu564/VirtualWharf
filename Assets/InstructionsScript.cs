@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using Rewired;
 public class InstructionsScript : MonoBehaviour {
 	public Button ControlsButton;
 	public Button VideoButton;
@@ -23,7 +24,19 @@ public class InstructionsScript : MonoBehaviour {
 	public bool VideoIsPlaying;
 	public IntroVideo VidScript;
 
+
+    //Rewired
+    public Player p1, p2;
+
+    //Scene to go to
+    public string GoToScene;
+
 	// Use this for initialization
+    void Awake()
+    {
+        p1 = ReInput.players.GetPlayer(0);
+        p2 = ReInput.players.GetPlayer(1);
+    }
 	void Start () {
 		VidScript.enabled = true;
 		ControllerLabel.gameObject.SetActive (false);
@@ -38,18 +51,18 @@ public class InstructionsScript : MonoBehaviour {
 		PlayerTwoGameObject.gameObject.SetActive (true);
 		PlayerOneCheckmark.gameObject.SetActive (false);
 		PlayerTwoCheckmark.gameObject.SetActive (false);
-		VidPlayer = gameObject.AddComponent<VideoPlayer> ();
-		TutorialRawImage.texture = VidPlayer.texture;
+		//VidPlayer = gameObject.AddComponent<VideoPlayer> ();
+		//TutorialRawImage.texture = VidPlayer.texture;
 		
 	}
 	void LookAtControls(){
 		TutorialRawImage.gameObject.SetActive(false);
 		VidScript.enabled = false;
-		VidPlayer.enabled = false;
+		//VidPlayer.enabled = false;
 		print ("LOOKING AT CONTROLS");
 		ControllerLabel.gameObject.SetActive (true);
 		VideoLabel.gameObject.SetActive (false);
-		VidPlayer.Stop ();
+		//VidPlayer.Stop ();
 		ControlPage.gameObject.SetActive (true);
 
 	
@@ -58,12 +71,12 @@ public class InstructionsScript : MonoBehaviour {
 	void LookAtVideo(){ 
 		TutorialRawImage.gameObject.SetActive(true);
 		VidScript.enabled = true;
-		VidPlayer.timeReference = 0;
+		//VidPlayer.timeReference = 0;
 		print ("LOOKING AT VIDEO");	
 		ControllerLabel.gameObject.SetActive (false);
 		VideoLabel.gameObject.SetActive (true);
 		ControlPage.gameObject.SetActive (false);
-		VidPlayer.gameObject.SetActive (true);
+		//VidPlayer.gameObject.SetActive (true);
 
 	}
 	void Check(){
@@ -98,11 +111,11 @@ public class InstructionsScript : MonoBehaviour {
 
 	}
 	void CheckingPlayerControls(){
-		if(Input.GetKeyDown("f")){
+		if(Input.GetKeyDown("f") || p1.GetButtonDown("ready")){
 			PlayerOneIsReady=!PlayerOneIsReady;
 			Check ();
 		}
-		if (Input.GetKeyDown ("j")) {
+		if (Input.GetKeyDown ("j")||p2.GetButtonDown("ready")) {
 			PlayerTwoIsReady = !PlayerTwoIsReady;
 			Check ();
 		}
@@ -115,6 +128,7 @@ public class InstructionsScript : MonoBehaviour {
 			PlayerOneIsReady = true;
 			PlayerTwoIsReady = true;
 			BothPlayersAreReady = true;
+            SceneManager.LoadScene(GoToScene);
 		} else {
 			BothPlayersAreReady = false;
 		}

@@ -14,13 +14,13 @@ public class MainMenuButtons : MonoBehaviour {
 		Credits.onClick.AddListener (GoToCredits);
 		Quit.onClick.AddListener (GoToQuit);
 	}
-	void GoToGame(){
+	public void GoToGame(){
 		SceneManager.LoadScene ("sceneOne");
 	}
-	void GoToCredits(){
+	public void GoToCredits(){
 		SceneManager.LoadScene ("CreditsPage");
 	}
-	void GoToQuit(){
+	public void GoToQuit(){
 		Application.Quit ();
 	}
 	

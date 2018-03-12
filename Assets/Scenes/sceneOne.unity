@@ -7714,7 +7714,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 0.43
   m_Text: P1 Earned a Trophy
 --- !u!222 &273742363
 CanvasRenderer:
@@ -21108,7 +21108,7 @@ MonoBehaviour:
   TargetObject: {fileID: 0}
   target: {x: -9.52, y: 10.68, z: -88.55}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  LevelName: Minigame3Round1
+  LevelName: BurgerGame
 --- !u!136 &768830120
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -37208,7 +37208,7 @@ MonoBehaviour:
   TargetObject: {fileID: 0}
   target: {x: -8.5, y: 7.59, z: -38.25}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  LevelName: Minigame5
+  LevelName: CandyGame
 --- !u!136 &1338562005
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -41404,7 +41404,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: P1
+  m_Text: P2
 --- !u!222 &1465317035
 CanvasRenderer:
   m_ObjectHideFlags: 0
