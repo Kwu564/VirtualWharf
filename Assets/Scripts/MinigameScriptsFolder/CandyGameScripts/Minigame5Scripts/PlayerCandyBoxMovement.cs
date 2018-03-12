@@ -12,7 +12,7 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
 	public GameObject DarkChocolateRockyRoadBitsUI;
 	public GameObject PeachyOsUI;
 	public GameObject SaltWaterTaffyUI;
-	private Rigidbody2D CandyBox;
+	public Rigidbody2D CandyBox;
 	private Image SRenderer;
 	public Image CandyBoxMeter;
     public int id;
@@ -110,54 +110,71 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minScreenBounds.x + 1, maxScreenBounds.x - 1), Mathf.Clamp(transform.position.y, minScreenBounds.y + 1, maxScreenBounds.y - 1), transform.position.z);
     }
 	void OnCollisionEnter2D(Collision2D Col){
-		if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag == "RedLicoriceWheels") && (SRenderer.sprite == RedLicoriceWheelBox)) {
-			CandyCounter += 1;
-			CandyBoxMeter.fillAmount += (1f/3f);
-			Destroy (Col.gameObject);
-		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "RedLicoriceWheels") && (SRenderer.sprite == RedLicoriceWheelBox)) {
-			CandyCounter = 0;
-			CandyBoxMeter.fillAmount = 0;
-			Destroy (Col.gameObject);
-		}
-		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "LicoricePastels") && (SRenderer.sprite== LicoricePastelsBox) ){
-			CandyCounter += 1;
-            CandyBoxMeter.fillAmount += (1f / 4f);
-            Destroy (Col.gameObject);
-		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "LicoricePastels") && (SRenderer.sprite == LicoricePastelsBox)) {
-			CandyCounter = 0;
-            CandyBoxMeter.fillAmount = 0;
-            Destroy (Col.gameObject);
-		}
-		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "DarkChocolateRockyRoadBits") && (SRenderer.sprite == DarkChocolateRockyRoadBitsBox) ){
-			CandyCounter += 1;
-            print("hit");
-            CandyBoxMeter.fillAmount += (1f / 2f);
-            Destroy (Col.gameObject);
-		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "DarkChocolateRockyRoadBits") && (SRenderer.sprite == DarkChocolateRockyRoadBitsBox)) {
-			CandyCounter = 0;
-            CandyBoxMeter.fillAmount = 0;
-            print("miss");
-            Destroy (Col.gameObject);
-		}
-		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "PeachyOs") && (SRenderer.sprite== PeachyOsBox) ){
-			CandyCounter += 1;
-            CandyBoxMeter.fillAmount += (1f/3f);
-            Destroy (Col.gameObject);
-		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "PeachyOs") && (SRenderer.sprite == PeachyOsBox)) {
-			CandyCounter = 0;
-            CandyBoxMeter.fillAmount = 0;
-            Destroy (Col.gameObject);
-		}
-		if ( (Col.gameObject.tag != "Player") && (Col.gameObject.tag == "SaltWaterTaffy") && (SRenderer.sprite== SaltWaterTaffyBox) ){
-			CandyCounter += 1;
-            CandyBoxMeter.fillAmount += 1f;
-            Destroy (Col.gameObject);
-		} else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "SaltWaterTaffy") && (SRenderer.sprite == SaltWaterTaffyBox)) {
-			CandyCounter = 0;
-            CandyBoxMeter.fillAmount = 0;
-            Destroy (Col.gameObject);
-		}
-		
+        if (Col.otherCollider.GetType() == typeof(BoxCollider2D))
+        {
+            if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag == "RedLicoriceWheels") && (SRenderer.sprite == RedLicoriceWheelBox))
+            {
+                CandyCounter += 1;
+                CandyBoxMeter.fillAmount += (1f / 3f);
+                Destroy(Col.gameObject);
+            }
+            else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "RedLicoriceWheels") && (SRenderer.sprite == RedLicoriceWheelBox))
+            {
+                CandyCounter = 0;
+                CandyBoxMeter.fillAmount = 0;
+                Destroy(Col.gameObject);
+            }
+            if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag == "LicoricePastels") && (SRenderer.sprite == LicoricePastelsBox))
+            {
+                CandyCounter += 1;
+                CandyBoxMeter.fillAmount += (1f / 4f);
+                Destroy(Col.gameObject);
+            }
+            else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "LicoricePastels") && (SRenderer.sprite == LicoricePastelsBox))
+            {
+                CandyCounter = 0;
+                CandyBoxMeter.fillAmount = 0;
+                Destroy(Col.gameObject);
+            }
+            if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag == "DarkChocolateRockyRoadBits") && (SRenderer.sprite == DarkChocolateRockyRoadBitsBox))
+            {
+                CandyCounter += 1;
+                print("hit");
+                CandyBoxMeter.fillAmount += (1f / 2f);
+                Destroy(Col.gameObject);
+            }
+            else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "DarkChocolateRockyRoadBits") && (SRenderer.sprite == DarkChocolateRockyRoadBitsBox))
+            {
+                CandyCounter = 0;
+                CandyBoxMeter.fillAmount = 0;
+                print("miss");
+                Destroy(Col.gameObject);
+            }
+            if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag == "PeachyOs") && (SRenderer.sprite == PeachyOsBox))
+            {
+                CandyCounter += 1;
+                CandyBoxMeter.fillAmount += (1f / 3f);
+                Destroy(Col.gameObject);
+            }
+            else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "PeachyOs") && (SRenderer.sprite == PeachyOsBox))
+            {
+                CandyCounter = 0;
+                CandyBoxMeter.fillAmount = 0;
+                Destroy(Col.gameObject);
+            }
+            if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag == "SaltWaterTaffy") && (SRenderer.sprite == SaltWaterTaffyBox))
+            {
+                CandyCounter += 1;
+                CandyBoxMeter.fillAmount += 1f;
+                Destroy(Col.gameObject);
+            }
+            else if ((Col.gameObject.tag != "Player") && (Col.gameObject.tag != "SaltWaterTaffy") && (SRenderer.sprite == SaltWaterTaffyBox))
+            {
+                CandyCounter = 0;
+                CandyBoxMeter.fillAmount = 0;
+                Destroy(Col.gameObject);
+            }
+        }
 	}
     IEnumerator Pause()
     {

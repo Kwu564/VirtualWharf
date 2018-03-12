@@ -6,8 +6,12 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 // Allow us to access our key mappings
 using Rewired;
-
+using Rewired.ControllerExtensions;
 public class MoveTo : MonoBehaviour {
+
+    public Rewired.ControllerExtensions.DualShock4Extension ds4;
+    public bool flicked = false;
+
     /*Animation related information*/
     [SerializeField]
     float m_MovingTurnSpeed = 360;
@@ -87,6 +91,13 @@ public class MoveTo : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+         
+        foreach (Joystick joystick in ReInput.players.GetPlayer(id).controllers.Joysticks)
+        {
+            // Get the Dual Shock 4 Controller Extension from the Joystick
+            ds4 = joystick.GetExtension<Rewired.ControllerExtensions.DualShock4Extension>();
+            if (ds4 == null) continue; // this is not a DS4, skip it
+        }
     }
     void Start() {
         
@@ -101,7 +112,13 @@ public class MoveTo : MonoBehaviour {
     }
     void OnEnable()
     {
-        
+        foreach (Joystick joystick in ReInput.players.GetPlayer(id).controllers.Joysticks)
+        {
+            // Get the Dual Shock 4 Controller Extension from the Joystick
+            ds4 = joystick.GetExtension<Rewired.ControllerExtensions.DualShock4Extension>();
+            if (ds4 == null) continue; // this is not a DS4, skip it
+        }
+        flicked = false;
     }
     void Update()
     {
@@ -117,9 +134,17 @@ public class MoveTo : MonoBehaviour {
             }
             print(GlobalData.P1Inventory.Count);
         }
-        // Detect key mapped input
-        if (ReInput.players.GetPlayer(id).GetButtonDown("action") && !moved && isMoving && !clicked)
+        if(ds4 != null)
         {
+            if(ds4.GetAccelerometerValue().z > .8f)
+            {
+                flicked = true;
+            }
+        }
+        // Detect key mapped input
+        if ((ReInput.players.GetPlayer(id).GetButtonDown("action")||flicked) && !moved && isMoving && !clicked)
+        {
+            flicked = false;
             GlobalData.FirstLoad = false;
             print(id);
             print(gameObject);

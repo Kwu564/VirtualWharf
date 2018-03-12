@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 45355567}
   - component: {fileID: 45355566}
   - component: {fileID: 45355565}
+  - component: {fileID: 45355568}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -205,7 +206,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45355560}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -217,7 +218,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &45355564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97061a60832a7234db19862142af97b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1000
+  Speed: 1250
   RedLicoriceWheelMeter: {fileID: 21300000, guid: 4240b070b307c5c428583a576fe613e7,
     type: 3}
   LicoricePastelMeter: {fileID: 21300000, guid: e234ee178242cf840b4ac057014363d9,
@@ -242,6 +243,7 @@ MonoBehaviour:
   DarkChocolateRockyRoadBitsUI: {fileID: 1288596421}
   PeachyOsUI: {fileID: 1561411108}
   SaltWaterTaffyUI: {fileID: 962528755}
+  CandyBox: {fileID: 0}
   CandyBoxMeter: {fileID: 1679340887}
   id: 0
   winner: {fileID: 1903451114}
@@ -267,7 +269,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.4, y: 4.18}
+  m_Offset: {x: -1.5863408, y: 3.737443}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -278,7 +280,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.38, y: 1.1}
+  m_Size: {x: 4.0073185, y: 1.985115}
   m_EdgeRadius: 0
 --- !u!114 &45355566
 MonoBehaviour:
@@ -313,6 +315,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45355560}
+--- !u!70 &45355568
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 45355560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.494218, y: -1.3234475}
+  m_Size: {x: 5.6054096, y: 7.947715}
+  m_Direction: 0
 --- !u!1 &47988540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,7 +2028,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1726443874}
   m_Father: {fileID: 681335882}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3760,6 +3778,7 @@ GameObject:
   - component: {fileID: 1155304483}
   - component: {fileID: 1155304482}
   - component: {fileID: 1155304478}
+  - component: {fileID: 1155304484}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -3799,7 +3818,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.4, y: 4.18}
+  m_Offset: {x: -1.5863408, y: 3.737443}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3810,7 +3829,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.38, y: 1.1}
+  m_Size: {x: 4.0073185, y: 1.985115}
   m_EdgeRadius: 0
 --- !u!50 &1155304479
 Rigidbody2D:
@@ -3819,7 +3838,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1155304476}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3831,7 +3850,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1155304480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3843,7 +3862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97061a60832a7234db19862142af97b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1000
+  Speed: 1250
   RedLicoriceWheelMeter: {fileID: 21300000, guid: 4240b070b307c5c428583a576fe613e7,
     type: 3}
   LicoricePastelMeter: {fileID: 21300000, guid: e234ee178242cf840b4ac057014363d9,
@@ -3856,6 +3875,7 @@ MonoBehaviour:
   DarkChocolateRockyRoadBitsUI: {fileID: 1842760698}
   PeachyOsUI: {fileID: 643317493}
   SaltWaterTaffyUI: {fileID: 1408658138}
+  CandyBox: {fileID: 0}
   CandyBoxMeter: {fileID: 527298245}
   id: 1
   winner: {fileID: 1903451114}
@@ -3946,6 +3966,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1155304476}
+--- !u!70 &1155304484
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155304476}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.494218, y: -1.3234475}
+  m_Size: {x: 5.6054096, y: 7.947715}
+  m_Direction: 0
 --- !u!1 &1179879574
 GameObject:
   m_ObjectHideFlags: 0
@@ -5046,6 +5081,86 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713047492}
+--- !u!1 &1726443873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1726443874}
+  - component: {fileID: 1726443876}
+  - component: {fileID: 1726443875}
+  - component: {fileID: 1726443877}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1726443874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726443873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 565595613}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.1, y: 0.8}
+  m_SizeDelta: {x: 774.8, y: 416.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1726443875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 0226c59bd36341f4fa2fb341630d2ac2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1726443876
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726443873}
+--- !u!225 &1726443877
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726443873}
+  m_Enabled: 1
+  m_Alpha: 0.47
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1752892059
 GameObject:
   m_ObjectHideFlags: 0
