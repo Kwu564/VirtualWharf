@@ -14,10 +14,6 @@ public class PS4Anim : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (GlobalData.FirstLoad == false)
-        {
-            gameObject.SetActive(false);
-        }
         if (max > 0)
         {
             transform.Rotate(Vector3.left * Time.deltaTime * speed);
