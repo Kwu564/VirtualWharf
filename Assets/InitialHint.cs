@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class InitialHint : MonoBehaviour {
-
+    public Text WhoseTurn;
+    public GameObject hint;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,9 +12,12 @@ public class InitialHint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!GlobalData.FirstLoad)
+        if (GlobalData.turn >= 2 && WhoseTurn.text=="")
         {
-            gameObject.SetActive(false);
+            hint.SetActive(false);
+        }else if(GlobalData.turn <= 2 && WhoseTurn.text !="")
+        {
+            hint.SetActive(true);
         }
 	}
 }

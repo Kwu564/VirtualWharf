@@ -7,16 +7,18 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject InGameMenuPopUp;
     public bool pauseMenuShows;
-
+    public Player p1, p2;
     // Use this for initialization
     void Start()
     {
+        p1 = ReInput.players.GetPlayer(0);
+        p2 = ReInput.players.GetPlayer(1);
         Canvas popupMenu = InGameMenuPopUp.GetComponentInParent<Canvas>();
         pauseMenuShows = false;
     }
     void onPause()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P)||p1.GetButtonDown("pause")|| p2.GetButtonDown("pause"))
         {
             pauseMenuShows = !pauseMenuShows;
 

@@ -26,7 +26,7 @@ public class TwoPlayer : MonoBehaviour {
         Pole2Anim.Play();
         if (p1.GetButton("action"))
         {
-            SceneManager.LoadScene("PlayerJoining");
+            SceneManager.LoadScene("PlayerJoiningScreen");
         }
     }
     private void OnMouseExit()

@@ -17,14 +17,14 @@ public class PauseMenuButtonClicks : MonoBehaviour {
 		QuitButton.onClick.AddListener (OnQuitClick);
 		
 	}
-	void OnResumeClick(){
+	public void OnResumeClick(){
 		GameObject.Find("Main Camera").GetComponent<PauseMenu> ().pauseMenuShows = false;
 	}
-	void OnReturnToTitleOnClick(){
+	public void OnReturnToTitleOnClick(){
 		GameObject.Find("Main Camera").GetComponent<PauseMenu> ().pauseMenuShows = false;
 		SceneManager.LoadScene ("MainMenu");
 	}
-	void OnQuitClick(){
+	public  void OnQuitClick(){
 		Application.Quit ();
 	}
 	

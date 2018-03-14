@@ -15,7 +15,7 @@ public class MainMenuButtons : MonoBehaviour {
 		Quit.onClick.AddListener (GoToQuit);
 	}
 	public void GoToGame(){
-		SceneManager.LoadScene ("sceneOne");
+		SceneManager.LoadScene ("ChooseAModePage");
 	}
 	public void GoToCredits(){
 		SceneManager.LoadScene ("CreditsPage");

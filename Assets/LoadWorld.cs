@@ -75,6 +75,7 @@ public class LoadWorld : MonoBehaviour
         {
 
             //GameObject.Find()
+            GlobalData.FirstLoad = false;
             try
             {
                 foreach (Transform child in transform)

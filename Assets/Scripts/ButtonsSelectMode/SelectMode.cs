@@ -25,7 +25,7 @@ public class SelectMode : MonoBehaviour {
         SceneManager.LoadScene("OnePlayer");
     }
 	void ToTwoPlayerMode(){
-        SceneManager.LoadScene("PlayerJoining");
+        SceneManager.LoadScene("PlayerJoiningScreen");
     }
 	// Update is called once per frame
 	void Update () {

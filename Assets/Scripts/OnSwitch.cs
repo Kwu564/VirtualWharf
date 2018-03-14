@@ -11,6 +11,7 @@ public class OnSwitch : MonoBehaviour {
     public Text WhoseTurn;
     public GameObject Trophy;
     public Text TrophyText;
+    public Image TrophyImage;
     public GameObject cam;
     public GameObject Player1, Player2;
     // Use this for initialization
@@ -106,14 +107,13 @@ public class OnSwitch : MonoBehaviour {
                 yield return new WaitWhile(GlobalData.GetCamMoving);
                 Trophy.SetActive(true);
                 TrophyText.text = "P1 won a trophy!";
-                try
-                {
-                    Sprite item = GlobalData.Inventory[0].Last().GetComponent<SpriteRenderer>().sprite;
-                    Trophy.GetComponent<Image>().sprite = item;
+                print(GlobalData.Inventory[0][GlobalData.Inventory[0].Count - 1]);
+                    Sprite item = GlobalData.Inventory[0][GlobalData.Inventory[0].Count -1].GetComponent<SpriteRenderer>().sprite;
+                print(item);
+                print(Trophy.GetComponent<Image>());
+                TrophyImage.sprite = item;
                     GameObject current = Trophy.transform.Find("Item").gameObject;
                     current.GetComponent<Image>().sprite = item;
-                }
-                catch { }
                 yield return new WaitForSeconds(2f);
                 print("Winner is: " + (GlobalData.MinigameWinner + 1));
                 Trophy.SetActive(false);
@@ -139,6 +139,6 @@ public class OnSwitch : MonoBehaviour {
     IEnumerator Dissappear()
     {
         yield return new WaitForSeconds(1.5f);
-        WhoseTurn.text = "";
+        //WhoseTurn.text = "";
     }
 }

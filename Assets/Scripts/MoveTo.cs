@@ -134,18 +134,18 @@ public class MoveTo : MonoBehaviour {
             }
             print(GlobalData.P1Inventory.Count);
         }
-        if(ds4 != null)
+        /*if(ds4 != null)
         {
             if(ds4.GetAccelerometerValue().z > .8f)
             {
                 flicked = true;
             }
-        }
+        }*/
         // Detect key mapped input
-        if ((ReInput.players.GetPlayer(id).GetButtonDown("action")||flicked) && !moved && isMoving && !clicked)
+        if ((ReInput.players.GetPlayer(id).GetButtonDown("action")||(ds4 != null && ds4.GetAccelerometerValue().z > .8f)) && !moved && isMoving && !clicked)
         {
             flicked = false;
-            GlobalData.FirstLoad = false;
+            //GlobalData.FirstLoad = false;
             print(id);
             print(gameObject);
             WhoseTurn.text = "";

@@ -16,8 +16,8 @@ public class FoodMovement : MonoBehaviour {
 	public bool Flip;
 	public bool HasCollided;
     private bool check = false;
-	public CircleCollider2D IngredientCollider;
-	public CircleCollider2D StickCollider;
+	public Collider2D IngredientCollider;
+	public Collider2D StickCollider;
 	public Camera cam;
     public Canvas cafe;
 	// Use this for initialization
@@ -53,6 +53,7 @@ public class FoodMovement : MonoBehaviour {
 		if (IngredientCollider.IsTouching (StickCollider)) {
 			print ("PLUS 1");
             Minigame3Data.Scores[player,Minigame3Data.round] += 100;
+			print (Minigame3Data.Scores [player, Minigame3Data.round]);
             HasCollided = true;
 		}
         Minigame3Data.Checked[player, Minigame3Data.round] += 1;

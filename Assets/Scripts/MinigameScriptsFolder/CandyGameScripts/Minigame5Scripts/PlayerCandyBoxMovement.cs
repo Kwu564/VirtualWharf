@@ -78,6 +78,7 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
             if (!GlobalData.Inventory[id].Contains(trophy))
             {
                 GlobalData.Inventory[id].Add(trophy);
+                print(GlobalData.Inventory[id][GlobalData.Inventory[id].Count - 1]);
             }
             GlobalData.MinigameWinner = id;
             SceneManager.LoadScene("sceneOne");

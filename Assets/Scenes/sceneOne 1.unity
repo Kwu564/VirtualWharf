@@ -1143,7 +1143,6 @@ GameObject:
   - component: {fileID: 50072280}
   - component: {fileID: 50072279}
   - component: {fileID: 50072281}
-  - component: {fileID: 50072282}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1284,19 +1283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992feec4267af9641a7bc3dbe6c8997a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &50072282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 50072274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a97ef58cb794ac34d8c1d40ed3539b2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WhoseTurn: {fileID: 299490265}
-  hint: {fileID: 1855616802}
 --- !u!1001 &50123631
 Prefab:
   m_ObjectHideFlags: 0
@@ -21735,6 +21721,7 @@ GameObject:
   - component: {fileID: 773818469}
   - component: {fileID: 773818470}
   - component: {fileID: 773818471}
+  - component: {fileID: 773818472}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -21920,6 +21907,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &773818472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773818463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2dcedec79460594682e7c8e1831eb8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &776374374
 Prefab:
   m_ObjectHideFlags: 0
@@ -26213,7 +26211,6 @@ MonoBehaviour:
   WhoseTurn: {fileID: 299490265}
   Trophy: {fileID: 170963094}
   TrophyText: {fileID: 273742362}
-  TrophyImage: {fileID: 1394688551}
   cam: {fileID: 773818463}
   Player1: {fileID: 2067443247}
   Player2: {fileID: 1307100080}
@@ -51959,7 +51956,7 @@ GameObject:
   - component: {fileID: 1855616803}
   - component: {fileID: 1855616804}
   m_Layer: 5
-  m_Name: HintText
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51994,13 +51991,11 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855616802}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a97ef58cb794ac34d8c1d40ed3539b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhoseTurn: {fileID: 299490265}
-  hint: {fileID: 0}
 --- !u!1 &1858621513
 GameObject:
   m_ObjectHideFlags: 0
