@@ -8,6 +8,7 @@ using Rewired;
 public class InstructionsScript : MonoBehaviour {
 	public Button ControlsButton;
 	public Button VideoButton;
+	public Button PracticeButton;
 	public bool PlayerOneIsReady;
 	public RawImage TutorialRawImage;
 	public VideoClip TutorialVideo;
@@ -30,6 +31,7 @@ public class InstructionsScript : MonoBehaviour {
 
     //Scene to go to
     public string GoToScene;
+	public string PracticeModeName;
 
 	// Use this for initialization
     void Awake()
@@ -45,6 +47,7 @@ public class InstructionsScript : MonoBehaviour {
 		ControlsButton.onClick.AddListener (LookAtControls);
 		VideoButton.onClick.AddListener (LookAtVideo);
 		PlayerOneIsReady = false;
+		PracticeButton.onClick.AddListener (GoToPracticeMode);
 		PlayerTwoIsReady = false;
 		BothPlayersAreReady = false;
 		PlayerOneGameObject.gameObject.SetActive (true);
@@ -78,6 +81,10 @@ public class InstructionsScript : MonoBehaviour {
 		ControlPage.gameObject.SetActive (false);
 		//VidPlayer.gameObject.SetActive (true);
 
+	}
+	void GoToPracticeMode(){
+		SceneManager.LoadScene (PracticeModeName);
+		
 	}
 	void Check(){
 		 if (!PlayerTwoCheckmark.enabled || !PlayerOneCheckmark.enabled) {

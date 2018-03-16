@@ -65,3 +65,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/WellFishing.unity
     guid: 4d28cebeeadcad14890e808ba9121320
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/CandyGameScenes/Minigame5/PracticeModeCandy/CandyGamePracticeMode.unity
+    guid: fbc8855afc910ad4e9136661659b5398

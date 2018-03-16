@@ -673,6 +673,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b68e9ca0d7c950418666b5ca502bc45, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &436242542 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114970413010162080, guid: 7b68e9ca0d7c950418666b5ca502bc45,
+    type: 2}
+  m_PrefabInternal: {fileID: 436242541}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &480241554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ControlsButton: {fileID: 1798178263}
   VideoButton: {fileID: 510180633}
+  PracticeButton: {fileID: 436242542}
   PlayerOneIsReady: 0
   TutorialRawImage: {fileID: 218405928}
   TutorialVideo: {fileID: 32900000, guid: 8f9d85731904ba74fa5bb7e5db562b5e, type: 3}
@@ -1856,6 +1863,7 @@ MonoBehaviour:
   VideoIsPlaying: 0
   VidScript: {fileID: 218405930}
   GoToScene: Minigame5
+  PracticeModeName: CandyGamePracticeMode
 --- !u!1 &1051128127
 GameObject:
   m_ObjectHideFlags: 0
