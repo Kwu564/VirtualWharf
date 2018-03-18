@@ -24,7 +24,7 @@ public class InstructionsScript : MonoBehaviour {
 	public Image ControlPage;
 	public bool VideoIsPlaying;
 	public IntroVideo VidScript;
-
+	//public Minigame3Data1 dataa;
 
     //Rewired
     public Player p1, p2;
@@ -40,6 +40,7 @@ public class InstructionsScript : MonoBehaviour {
         p2 = ReInput.players.GetPlayer(1);
     }
 	void Start () {
+		Minigame3Data1.clear ();
 		VidScript.enabled = true;
 		ControllerLabel.gameObject.SetActive (false);
 		ControlPage.gameObject.SetActive (false);

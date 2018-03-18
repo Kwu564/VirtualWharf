@@ -22,7 +22,7 @@ EditorBuildSettings:
     guid: f5ebeda6f6f6dbf41982c7d02c68f8df
   - enabled: 0
     path: 
-    guid: 64abe784f11f33d4db4b84d849276ddb
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/CreditsPage.unity
     guid: ab58b174f02bc88488eb555711e79457
@@ -68,3 +68,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigameScenes/CandyGameScenes/Minigame5/PracticeModeCandy/CandyGamePracticeMode.unity
     guid: fbc8855afc910ad4e9136661659b5398
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/PracticeModesBurger/BurgerGamePracticeRound1.unity
+    guid: 17a1ac53ac08bf447baf226367a7acae
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/PracticeModesBurger/BurgerGamePracticeRound2.unity
+    guid: f0e58b945221880409812e6726730f7a
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/PracticeModesBurger/BurgerGamePracticeRound3.unity
+    guid: 369029cd651e5ea4a99ce4273a2fdd03
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/BurgerGameScenes/Minigame3/PracticeModesBurger/BurgerGamePracticeRound4.unity
+    guid: ef529a49852b5a143b4c28e9657706f2
