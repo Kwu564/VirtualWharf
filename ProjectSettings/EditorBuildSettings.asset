@@ -83,3 +83,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/PracticeMinigame2/PracticeMinigameInshore.unity
+    guid: b6632409bcf88d84d8b536f5fcbcff08
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/PracticeMinigame2/PracticeMinigameMidpier.unity
+    guid: 63c218c9cac1934449d29f7b760aadbf
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/PracticeMinigame2/PracticeMinigameWells.unity
+    guid: 6feff991bbbc3734fb39193eeb8b18e3

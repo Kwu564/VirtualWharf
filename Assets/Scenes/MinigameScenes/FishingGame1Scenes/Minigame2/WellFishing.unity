@@ -1742,7 +1742,7 @@ MonoBehaviour:
   VideoIsPlaying: 0
   VidScript: {fileID: 218405930}
   GoToScene: Minigame2
-  PracticeModeName: WellFishing
+  PracticeModeName: PracticeMinigameWells
 --- !u!1 &1051128127
 GameObject:
   m_ObjectHideFlags: 0

@@ -26685,6 +26685,25 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: fe701977d34fe4345ab5d5ada13a83f7,
         type: 3}
+    - target: {fileID: 114265447913360600, guid: cd1385ca90096f847967cb6951fc9caa,
+        type: 2}
+      propertyPath: m_Text
+      value: Mid-pier Fishing
+      objectReference: {fileID: 0}
+    - target: {fileID: 114924372704370500, guid: cd1385ca90096f847967cb6951fc9caa,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 584554d3ef291c644b8642705f06b3fb,
+        type: 3}
+    - target: {fileID: 114169598819181532, guid: cd1385ca90096f847967cb6951fc9caa,
+        type: 2}
+      propertyPath: m_Text
+      value: "Grab a bite, go shopping, and more! The mid-pier area has loads to offer
+        because that is where the bait and tackle shops, restaurants, souvenir shops,
+        and many fishing spots are. \n\nYou do not need a fishing license while fishing
+        at the pier!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd1385ca90096f847967cb6951fc9caa, type: 2}
   m_IsPrefabParent: 0
@@ -42676,6 +42695,18 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: fe701977d34fe4345ab5d5ada13a83f7,
         type: 3}
+    - target: {fileID: 114265447913360600, guid: cd1385ca90096f847967cb6951fc9caa,
+        type: 2}
+      propertyPath: m_Text
+      value: Inshore Fishing
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169598819181532, guid: cd1385ca90096f847967cb6951fc9caa,
+        type: 2}
+      propertyPath: m_Text
+      value: The inshore area is along the beach. While fishing here, you can catch
+        many of the largest fish of the perch family like the Pile Surfperch, Barred
+        Surfperch, and Rubberlip Surfperch.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd1385ca90096f847967cb6951fc9caa, type: 2}
   m_IsPrefabParent: 0
@@ -58457,10 +58488,12 @@ Prefab:
     - target: {fileID: 114169598819181532, guid: cd1385ca90096f847967cb6951fc9caa,
         type: 2}
       propertyPath: m_Text
-      value: Sea lions always seem to be sleeping on the crossbeams between the pilings
-        of the wells. The wells are also the best spots to catch large, legal size
-        lingcod (normally during the fall or winter months) as well as rockfish. Fishing
-        on the pier does not require a fishing license.
+      value: 'Love sea lions? Check out the wells! While fishing at the wells, you
+        can see a bunch of sea lions sleeping at the bottom. You can catch many rockfish,
+        and around fall or winter, an occasional lingcod might show up.
+
+
+        Fishing on the pier does not require a fishing license.'
       objectReference: {fileID: 0}
     - target: {fileID: 114169598819181532, guid: cd1385ca90096f847967cb6951fc9caa,
         type: 2}
