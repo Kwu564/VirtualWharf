@@ -1108,10 +1108,8 @@ MonoBehaviour:
   - {fileID: 1552095789884830, guid: bb993e8348efe7c46aeb62f7a0308bf3, type: 2}
   - {fileID: 1864027507728622, guid: 3be7e7a27bad95444b24f192fe46f69c, type: 2}
   - {fileID: 1667408419159084, guid: 462d96943f80cd547bbc07f27756d720, type: 2}
-  - {fileID: 1498257246744992, guid: e67f6dc7e4963bf4a8c67cf436e2b35f, type: 2}
-  - {fileID: 1153319554690978, guid: 29b833a297d3e3f4785eadcd2299d957, type: 2}
-  - {fileID: 1016514083219280, guid: 42c0b1bf006493c49ae694a791cdb073, type: 2}
-  - {fileID: 1686202022461822, guid: c2d1b1db688cdd943b221c1f91d92455, type: 2}
+  - {fileID: 1711368027670658, guid: d6ad28dace6dc6f4fab68bc0571d0763, type: 2}
+  - {fileID: 1685665219064296, guid: 2a1b38daba032fa41ba284b20e4daf4e, type: 2}
   popup: {fileID: 1799709427}
   FishName: {fileID: 325411632}
   FishImg: {fileID: 329421789}
