@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class Side : MonoBehaviour {
     public List<GameObject> tiles;
     // Use this for initialization
@@ -20,6 +20,7 @@ public class Side : MonoBehaviour {
         {
             tiles.Add(child.gameObject);
         }
+        tiles = tiles.OrderBy(go => go.name).ToList();
     }
     void Start () {
         

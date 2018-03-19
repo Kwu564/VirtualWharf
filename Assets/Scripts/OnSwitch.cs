@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 public class OnSwitch : MonoBehaviour {
     // The UI type that triggers our switch mechanism
+    public GameObject HUD;
+    public GameObject hint;
     public Button button;
     public Text WhoseTurn;
     public GameObject Trophy;
@@ -40,6 +42,8 @@ public class OnSwitch : MonoBehaviour {
     {
         print("working on it");
         yield return new WaitUntil(GlobalData.getWharf);
+        hint.SetActive(false);
+        HUD.SetActive(true);
         
         //yield return new WaitForSeconds(2f);
         if (GameObject.Find("Player1").GetComponent<MoveTo>().isMoving)
@@ -130,7 +134,10 @@ public class OnSwitch : MonoBehaviour {
             GameObject.Find("Player1").GetComponent<MoveTo>().isMoving = false;*/
             GlobalData.turn += 1;
         }
-        
+        if (GlobalData.turn <= 2)
+        {
+            hint.SetActive(true);
+        }
         StartCoroutine("Dissappear");
         Debug.Log("Switch players!");
 
@@ -138,6 +145,7 @@ public class OnSwitch : MonoBehaviour {
 
     IEnumerator Dissappear()
     {
+
         yield return new WaitForSeconds(1.5f);
         //WhoseTurn.text = "";
     }

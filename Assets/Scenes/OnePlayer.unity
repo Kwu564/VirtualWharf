@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4920,11 +4920,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad3f162bdd81a0479582872ff713cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HUD: {fileID: 0}
   p1: {fileID: 2067443247}
   p2: {fileID: 0}
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 844381973}
+  TargetObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   LevelName: Minigame1
 --- !u!1001 &185576642
 Prefab:
@@ -6891,11 +6895,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad3f162bdd81a0479582872ff713cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HUD: {fileID: 0}
   p1: {fileID: 2067443247}
   p2: {fileID: 0}
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 969157294}
+  TargetObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   LevelName: Minigame2
 --- !u!1001 &279807037
 Prefab:
@@ -18225,11 +18233,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad3f162bdd81a0479582872ff713cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HUD: {fileID: 0}
   p1: {fileID: 2067443247}
   p2: {fileID: 0}
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 2134746515}
+  TargetObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   LevelName: Minigame3Round1
 --- !u!136 &768830120
 CapsuleCollider:
@@ -20932,7 +20944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &896956304
 Transform:
   m_ObjectHideFlags: 0
@@ -22431,7 +22443,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d51ae582d3a04f47b29c422abddab17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HUD: {fileID: 0}
   button: {fileID: 954933290}
+  WhoseTurn: {fileID: 0}
+  Trophy: {fileID: 0}
+  TrophyText: {fileID: 0}
+  TrophyImage: {fileID: 0}
   cam: {fileID: 773818463}
   Player1: {fileID: 2067443247}
   Player2: {fileID: 0}
@@ -29032,6 +29049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08415e4e8aa517438b95b85da35ecba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Trophies: []
+  player: 0
 --- !u!114 &1204164738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32403,11 +32422,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad3f162bdd81a0479582872ff713cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HUD: {fileID: 0}
   p1: {fileID: 2067443247}
   p2: {fileID: 0}
   cam: {fileID: 773818463}
   triggers: {fileID: 896956303}
   LoadScreen: {fileID: 844381973}
+  TargetObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
   LevelName: 
 --- !u!136 &1338562005
 CapsuleCollider:

@@ -56,16 +56,18 @@ public class score : MonoBehaviour {
                 if (!GlobalData.Inventory[0].Contains(trophy))
                 {
                     GlobalData.Inventory[0].Add(trophy);
+                    GlobalData.MinigameWinner = 0;
                 }
-                GlobalData.MinigameWinner = 0;
+                
             }
             else if (P1Score < P2Score)
             {
                 if (!GlobalData.Inventory[1].Contains(trophy))
                 {
                     GlobalData.Inventory[1].Add(trophy);
+                    GlobalData.MinigameWinner = 1;
                 }
-                GlobalData.MinigameWinner = 1;
+                
             }
         }
         SceneManager.LoadScene(GoTo);

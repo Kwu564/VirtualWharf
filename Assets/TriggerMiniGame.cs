@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TriggerMiniGame : MonoBehaviour
 {
-
+    public GameObject HUD;
     public GameObject p1, p2;
     public GameObject cam;
     public GameObject triggers;
@@ -54,6 +54,7 @@ public class TriggerMiniGame : MonoBehaviour
     IEnumerator LoadNewScene(GameObject player)
     {
         yield return new WaitUntil(()=>player.GetComponent<MoveTo>().agent.isStopped == true);
+        HUD.SetActive(false);
         //player.GetComponent<MoveTo>().agent.isStopped = true;
         cam.GetComponent<CameraFollow>().enabled = false;
         Vector3 original = cam.transform.position;

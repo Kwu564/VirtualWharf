@@ -13,6 +13,7 @@ TagManager:
   - DarkChocolateRockyRoadBits
   - Fail
   - Correct
+  - Trace
   layers:
   - Default
   - TransparentFX

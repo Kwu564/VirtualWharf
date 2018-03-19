@@ -12,12 +12,9 @@ public class InitialHint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (GlobalData.turn >= 2 && WhoseTurn.text=="")
+        if (GlobalData.turn >= 2)
         {
             hint.SetActive(false);
-        }else if(GlobalData.turn <= 2 && WhoseTurn.text !="")
-        {
-            hint.SetActive(true);
         }
 	}
 }

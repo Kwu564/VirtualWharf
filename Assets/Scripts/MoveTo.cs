@@ -8,7 +8,7 @@ using UnityEngine.UI;
 using Rewired;
 using Rewired.ControllerExtensions;
 public class MoveTo : MonoBehaviour {
-
+    public GameObject canvas;
     public Rewired.ControllerExtensions.DualShock4Extension ds4;
     public bool flicked = false;
 
@@ -92,12 +92,7 @@ public class MoveTo : MonoBehaviour {
             Destroy(gameObject);
         }
          
-        foreach (Joystick joystick in ReInput.players.GetPlayer(id).controllers.Joysticks)
-        {
-            // Get the Dual Shock 4 Controller Extension from the Joystick
-            ds4 = joystick.GetExtension<Rewired.ControllerExtensions.DualShock4Extension>();
-            if (ds4 == null) continue; // this is not a DS4, skip it
-        }
+        
     }
     void Start() {
         
@@ -112,17 +107,23 @@ public class MoveTo : MonoBehaviour {
     }
     void OnEnable()
     {
+        /*foreach (Joystick joystick in ReInput.players.GetPlayer(id).controllers.Joysticks)
+        {
+            // Get the Dual Shock 4 Controller Extension from the Joystick
+            ds4 = joystick.GetExtension<Rewired.ControllerExtensions.DualShock4Extension>();
+            if (ds4 == null) continue; // this is not a DS4, skip it
+        }
+        flicked = false;*/
+    }
+    void Update()
+    {
         foreach (Joystick joystick in ReInput.players.GetPlayer(id).controllers.Joysticks)
         {
             // Get the Dual Shock 4 Controller Extension from the Joystick
             ds4 = joystick.GetExtension<Rewired.ControllerExtensions.DualShock4Extension>();
             if (ds4 == null) continue; // this is not a DS4, skip it
         }
-        flicked = false;
-    }
-    void Update()
-    {
-        
+
         // Grab the current cursor position
         cursorPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
         if (Input.GetKeyDown("n"))
@@ -185,6 +186,7 @@ public class MoveTo : MonoBehaviour {
                 //print(end);
                 //map.NextTile(end).SendMessage("OnTriggerEnter", gameObject.GetComponent<Collider>());
                 //map.NextTile(end).SendMessage("OnTriggerEnter",gameObject.GetComponent<Collider>());
+                canvas.SetActive(true);
                 agent.isStopped = true;
                 
 
@@ -259,6 +261,7 @@ public class MoveTo : MonoBehaviour {
         agent.destination = map.NextTile(current).transform.position;
         
         Dice.SetActive(false);
+        canvas.SetActive(false);
         moved = true;
     }
     IEnumerator SwitchPlayers()

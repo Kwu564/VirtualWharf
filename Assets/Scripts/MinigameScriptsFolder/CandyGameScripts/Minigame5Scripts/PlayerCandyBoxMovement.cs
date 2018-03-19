@@ -79,8 +79,9 @@ public class PlayerCandyBoxMovement : MonoBehaviour {
             {
                 GlobalData.Inventory[id].Add(trophy);
                 print(GlobalData.Inventory[id][GlobalData.Inventory[id].Count - 1]);
+                GlobalData.MinigameWinner = id;
             }
-            GlobalData.MinigameWinner = id;
+            
             SceneManager.LoadScene("sceneOne");
 		}
 		
