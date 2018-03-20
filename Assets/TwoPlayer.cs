@@ -8,10 +8,12 @@ using Rewired;
 public class TwoPlayer : MonoBehaviour {
     public Animation Pole1Anim;
     public Animation Pole2Anim;
+	public GameObject PressX;
     public Player p1;
     // Use this for initialization
     void Start () {
         p1 = ReInput.players.GetPlayer(0);
+		PressX.gameObject.SetActive (false);
     }
 	
 	// Update is called once per frame
@@ -24,6 +26,7 @@ public class TwoPlayer : MonoBehaviour {
         Pole1Anim.Play();
         Pole2Anim["Pole1Animation"].speed = 1f;
         Pole2Anim.Play();
+		PressX.gameObject.SetActive (true);
         if (p1.GetButton("action"))
         {
             SceneManager.LoadScene("PlayerJoiningScreen");
@@ -37,5 +40,6 @@ public class TwoPlayer : MonoBehaviour {
         Pole2Anim["Pole1Animation"].time = 0f;
         Pole2Anim.Sample();
         Pole2Anim.Stop();
+		PressX.gameObject.SetActive (false);
     }
 }

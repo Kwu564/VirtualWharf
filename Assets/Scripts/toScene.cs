@@ -6,7 +6,7 @@ using UnityEngine;
 public class toScene : MonoBehaviour {
 	public int distanceToItem;
 
-	public void letsFish(){
+	public void PopUpCanvas(){
 		SceneManager.LoadScene (1);
 	}
 
@@ -27,7 +27,7 @@ public class toScene : MonoBehaviour {
 			if (Physics.Raycast(ray, out hit, distanceToItem)){
 				if(hit.collider.gameObject.name=="Door"){
 					Debug.Log ("Let's go!!!");
-					letsFish ();
+					PopUpCanvas ();
 				}
 			}
 		}

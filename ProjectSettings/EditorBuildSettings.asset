@@ -92,3 +92,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/PracticeMinigame2/PracticeMinigameWells.unity
     guid: 6feff991bbbc3734fb39193eeb8b18e3
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/InshoreFishing.unity
+    guid: 56c504cfc0b595c438f247f4d551317d
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/MidpierFishing.unity
+    guid: 2e121bcdc2803a347a3dcedf2ba758bf
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/Minigame2Inshore.unity
+    guid: ad8b0c1be081f7e4f81e8cffc527784e
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/Minigame2Midpier.unity
+    guid: c50bdcfcfeb05da459d9ab35a1e990d0
+  - enabled: 1
+    path: Assets/Scenes/MinigameScenes/FishingGame1Scenes/Minigame2/Minigame2Inshore.unity
+    guid: ad8b0c1be081f7e4f81e8cffc527784e

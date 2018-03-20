@@ -21,7 +21,7 @@ public class InstructionsScript : MonoBehaviour {
 	public GameObject PlayerTwoGameObject;
 	public Image PlayerOneCheckmark;
 	public Image PlayerTwoCheckmark;
-	public Image ControlPage;
+	public GameObject ControlPage;
 	public bool VideoIsPlaying;
 	public IntroVideo VidScript;
 	//public Minigame3Data1 dataa;
@@ -63,7 +63,7 @@ public class InstructionsScript : MonoBehaviour {
 		TutorialRawImage.gameObject.SetActive(false);
 		VidScript.enabled = false;
 		//VidPlayer.enabled = false;
-		print ("LOOKING AT CONTROLS");
+
 		ControllerLabel.gameObject.SetActive (true);
 		VideoLabel.gameObject.SetActive (false);
 		//VidPlayer.Stop ();
@@ -75,8 +75,7 @@ public class InstructionsScript : MonoBehaviour {
 	void LookAtVideo(){ 
 		TutorialRawImage.gameObject.SetActive(true);
 		VidScript.enabled = true;
-		//VidPlayer.timeReference = 0;
-		print ("LOOKING AT VIDEO");	
+		//VidPlayer.timeReference = 0;	
 		ControllerLabel.gameObject.SetActive (false);
 		VideoLabel.gameObject.SetActive (true);
 		ControlPage.gameObject.SetActive (false);
@@ -90,30 +89,30 @@ public class InstructionsScript : MonoBehaviour {
 	void Check(){
 		 if (!PlayerTwoCheckmark.enabled || !PlayerOneCheckmark.enabled) {
 			BothPlayersAreReady = false;
-			print ("both are not ready");
+		
 		}
 
 		if (PlayerOneIsReady) {
 			PlayerOneCheckmark.gameObject.SetActive (true);
 			PlayerOneGameObject.gameObject.SetActive (false);
-			print ("Player One is Ready!");
+
 		}else if (!PlayerOneIsReady) {
 			PlayerOneCheckmark.gameObject.SetActive (false);
 			PlayerOneGameObject.gameObject.SetActive (true);
-			print ("Player One is Not Ready!");
+
 		}
 
 		if (PlayerTwoIsReady) {
 			PlayerTwoGameObject.gameObject.SetActive (false);
 			PlayerTwoCheckmark.gameObject.SetActive (true);
-			print ("Player Two is Ready!");
+
 		}  else if (!PlayerTwoIsReady) {
 			PlayerTwoGameObject.gameObject.SetActive (true);
 			PlayerTwoCheckmark.gameObject.SetActive (false);
-			print ("Player Two is Not Ready");
+
 		}
 		if (BothPlayersAreReady) {
-			print ("Both are ready");
+			
 		}
 		
 
